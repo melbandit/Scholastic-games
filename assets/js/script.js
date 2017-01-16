@@ -1,3 +1,15 @@
+$( function() {
+	$( "#draggable" ).draggable();
+	$( "#droppable" ).droppable({
+	drop: function( event, ui ) {
+		$( this )
+		  .addClass( "ui-state-highlight" )
+		  .find( "p" )
+		    .html( "Dropped!" );
+		}
+	});
+} );
+
 /*
 See http://www.greensock.com/draggable/ for details. 
 This demo uses ThrowPropsPlugin which is a membership benefit of Club GreenSock, http://www.greensock.com/club/
@@ -12,8 +24,8 @@ var $snap = $("#snap"),
 	gridColumns = 5,
 	i, x, y;
 
-var gridWidth = 200;
-var gridHeight = 100;
+var gridWidth = 204;
+var gridHeight = 128;
 Draggable.create(".box", {
     type:"x,y",
     edgeResistance:0.65,

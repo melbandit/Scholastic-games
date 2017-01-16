@@ -1,6 +1,50 @@
+@import "base/mixins";
 .ipad-container{
-	width: 1211px;
-	height: 873px;
-	margin: 20px auto;
-	background-image: url(../img/ipad-border.png);
+	position: relative;
+	width: 1024px;
+	height: 768px;
+	margin: 0 auto;
+	background-color: #948593;	
+	@include bp-md{
+		width: 1211px;
+		height: 873px;
+		margin: 20px auto;
+		background-image: url(../img/ipad-border.png);
+	}
+}
+.container-padding{
+	@include bp-md{
+		position: absolute;
+		margin-top: 46px;
+		margin-left: 84px;
+	}
+}
+#container{
+	// @include bp-md{
+	// 	position: absolute;
+	// 	top: 46px;
+	//     left: 84px;
+	// }
+}
+
+#draggable { 
+	width: 100px; 
+	height: 100px; 
+	padding: 0.5em; 
+	float: left; 
+	margin: 10px 10px 10px 0; 
+	background-color: #23456d;}
+#droppable { 
+	width: 150px; 
+	height: 150px; 
+	padding: 0.5em; 
+	float: left; 
+	margin: 10px; 
+	background-color: #2a556d;
+}
+
+#box1{
+	width: 100px;
+	height: 100px;
+	background-color: #aaffdd;
 }

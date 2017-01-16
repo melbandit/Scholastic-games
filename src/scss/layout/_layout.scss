@@ -1,0 +1,13 @@
+.col-one, .col-two, .col-three{
+	float: left;
+    width: 346px;
+    height: 780px;
+	border: 1px solid black;
+	&:hover{
+		background-color: #121212;
+		box-shadow: 1px 3px 2px rgba(23,534,23,0.5);
+		transform: scale(1.001);
+		transition-duration: 1s;
+		transform-origin: 50% 50%;
+	}
+}

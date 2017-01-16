@@ -1,0 +1,54 @@
+// BREAKPOINTS===============================
+
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-mdlg: 1200px;
+$breakpoint-lg: 1440px;
+
+
+// BREAKPOINT MIXINS=========================
+
+
+@mixin bp-sm  {
+			@media only screen and(min-width: $breakpoint-sm){
+			@content;
+		}
+}
+
+@mixin bp-md  {
+			@media only screen and(min-width: $breakpoint-md){
+			@content;
+		}
+}
+
+@mixin bp-mdlg  {
+			@media only screen and(min-width: $breakpoint-mdlg){
+			@content;
+		}
+}
+
+@mixin bp-lg  {
+			@media only screen and(min-width: $breakpoint-lg){
+			@content;
+		}
+}
+
+//Clearfix ====================================
+
+
+@mixin clearfix {
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//Usage:
+.clearfix {
+     @include clearfix;
+}

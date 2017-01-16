@@ -1,10 +1,10 @@
-@import 'node_modules/dragula/dragula';
 @import "base/reset";
 @import "base/mixins";
-@import "base/typography";
-@import "base/variables";
+// @import "base/typography";
+// @import "base/variables";
+@import "pages/container"
 
-@import "components/animations";
-@import "components/buttons";
-@import "components/hover";
-@import "components/footer";
+// @import "components/animations";
+// @import "components/buttons";
+// @import "components/hover";
+// @import "components/footer";

@@ -1,0 +1,32 @@
+#character{
+	position: absolute;
+	width: 250px;
+	top: 455px;
+	left: 40px;
+}
+#speech{
+	position: absolute;
+	width: 250px;
+	top: 80px;
+	left: 40px;
+}
+#ship{
+	position: absolute;
+	width: 140px;
+	right: 40px;
+	top: 455px;
+	transform: rotateZ(12deg);
+}
+.games-container{
+	position: absolute;
+	width: 700px;
+	height: auto;
+	top: 40px;
+	right: 0px;
+	img{
+		width: 30%;
+	    padding: 25px;
+	    width: 230px;
+	    height: auto;
+	}
+}

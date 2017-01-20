@@ -1,22 +1,35 @@
 @import "base/mixins";
+// .ipad-container{
+// 	position: relative;
+// 	width: 1024px;
+// 	height: 768px;
+// 	margin: 0 auto;
+// 	// background-color: #10243C;	
+// 	@include bp-md{
+// 		width: 1211px;
+// 		height: 873px;
+// 		margin: 20px auto;
+// 		background-image: url(../img/ipad-border.png);
+// 	}
+// }
+// .container-padding{
+// 	@include bp-md{
+// 		position: absolute;
+// 		margin-top: 46px;
+// 		margin-left: 84px;
+// 	}
+// }
 .ipad-container{
-	position: relative;
-	width: 1024px;
-	height: 768px;
-	margin: 0 auto;
-	background-color: #948593;	
 	@include bp-md{
-		width: 1211px;
-		height: 873px;
-		margin: 20px auto;
-		background-image: url(../img/ipad-border.png);
-	}
-}
-.container-padding{
-	@include bp-md{
-		position: absolute;
-		margin-top: 46px;
-		margin-left: 84px;
+		position: relative;
+		width: 1024px;
+		height: 768px;
+		margin: 0 auto;
+		border-top:30px solid black;
+		border-bottom:46px solid black;
+		border-right:80px solid black;
+		border-left:80px solid black;
+		border-radius: 25px;
 	}
 }
 #container{

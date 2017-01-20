@@ -18,38 +18,38 @@ var onError = function(err) {
 
 gulp.task('browser-sync', function(){
 	browserSync.init({
-		proxy: "http://localhost:8888",
+		// proxy: "http://localhost:8888",
 		//files: ["**/*.php"]
-		// server: {
-		// 	baseDir: './'
-		// }
+		server: {
+			baseDir: './'
+		}
 	});
 });
 
 gulp.task('minify-css', function(){
 	return gulp.src(sourceSCSS)
-	.pipe(plumber({errorHandler: onError}))
-	.pipe(sourcemaps.init())
-	.pipe(sass())
-	.pipe(cleanCSS({}))
-	.pipe(sourcemaps.write())
-	.pipe(rename(function(path) {
-		path.extname = '.min.css'
-	}))
-	.pipe(gulp.dest(cssOutput));
+		.pipe(plumber({errorHandler: onError}))
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(cleanCSS({}))
+		.pipe(sourcemaps.write())
+		.pipe(rename(function(path) {
+			path.extname = '.min.css'
+		}))
+		.pipe(gulp.dest(cssOutput));
 });
 
 gulp.task('scss', function(){
 	return gulp.src(sourceSCSS)
-	.pipe(plumber({errorHandler: onError}))
-	.pipe(sourcemaps.init())
-	.pipe(sass())
-	.pipe(sourcemaps.write())
-	.pipe(gulp.dest(cssOutput))
-	.pipe(browserSync.stream());
+		.pipe(plumber({errorHandler: onError}))
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(cssOutput))
+		.pipe(browserSync.stream());
 });
 
-gulp.task('server', ['scss', 'browser-sync'], function() {
+gulp.task('server', ['browser-sync', 'scss', ], function() {
 	gulp.watch(sourceSCSS, ['scss', 'minify-css']);
 	gulp.watch(['**/*.html', cssOutput + '/**/*.css']).on('change', browserSync.reload);
 })

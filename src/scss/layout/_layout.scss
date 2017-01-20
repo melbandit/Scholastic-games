@@ -11,3 +11,28 @@
 		transform-origin: 50% 50%;
 	}
 }
+div{
+	transition: 1s;
+}
+.bkg-color{
+	background-color: #10243C;	
+}
+.bkg-img{
+	position: absolute;
+	// top: 46px;
+	// left: 80px;
+	z-index: -1;
+}
+.arrow{
+	position: absolute;
+	width: 120px;
+	height: auto;
+	right: 60px;
+	bottom: 35px;
+	transform-duration: 1s;
+	&:hover{
+		transform-duration: 1s;
+		transform: scale(1.1);
+		transform-origin: 50% 50%;
+	}
+}

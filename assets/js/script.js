@@ -1,14 +1,37 @@
-// $( function() {
-// 	$( "#draggable" ).draggable();
-// 	$( "#droppable" ).droppable({
-// 	drop: function( event, ui ) {
-// 		$( this )
-// 		  .addClass( "ui-state-highlight" )
-// 		  .find( "p" )
-// 		    .html( "Dropped!" );
-// 		}
-// 	});
-// } );
+window.onload = function() {
+    $(".fade").css("display", "none");
+ 
+    $(".fade").fadeIn(2000);
+
+
+
+    TweenMax.to(".back--button", 1, {scaleX:5, scaleY:5});
+    TweenMax.to("#item-one", 0.5, {top: 50});
+    TweenMax.to("#item-two", 0.75, {left: 550, delay: 0.25});
+    TweenMax.from("#item-three", 1, {top: 250, alpha: 0, delay: 0.5});
+    TweenMax.from("#item-four", 1, {top: 330, alpha: 0, delay: 1});
+    TweenMax.from("#item-six", 1, {alpha: 0, delay: 2});
+
+    document.body.className = "animate";
+
+}
+//function if you select the first correct item, then a star appears. scales from 0 to 100%;
+//object choosen spins and zooms off the screen
+
+
+
+
+$( function() {
+	$( ".draggable" ).draggable();
+	$( "#droppable" ).droppable({
+	drop: function( event, ui ) {
+		$( this )
+		  .addClass( "ui-state-highlight" )
+		  .find( "p" )
+		    .html( "Dropped!" );
+		}
+	});
+} );
 
 // /*
 // See http://www.greensock.com/draggable/ for details. 

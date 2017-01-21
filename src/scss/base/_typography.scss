@@ -1,5 +1,9 @@
 body{
-	font-family: "Cachet Book";
+	font-family: "Cachet Book", 'san serif';
+	background-color: black;
+	@include bp-md{
+		background-color: white;
+	}
 }
 @font-face {
     font-family: Cachet Book;

@@ -1,7 +1,7 @@
 #character{
 	position: absolute;
 	width: 250px;
-	top: 455px;
+	top: 350px;
 	left: 40px;
 }
 #speech{
@@ -13,20 +13,68 @@
 #ship{
 	position: absolute;
 	width: 140px;
-	right: 40px;
+	left: 840px;
 	top: 455px;
 	transform: rotateZ(12deg);
+}
+.back--button{
+	position: absolute;
+	width: 80px;
+	top: 10px;
+	left: 20px;
 }
 .games-container{
 	position: absolute;
 	width: 700px;
 	height: auto;
 	top: 40px;
-	right: 0px;
+	left: 350px;
 	img{
-		width: 30%;
 	    padding: 25px;
 	    width: 230px;
 	    height: auto;
+	}
+}
+.gameOne-container{
+	.character{
+		position: absolute;
+    	top: 185px;
+    	left: 350px;
+	}
+	#item-one{
+		position: absolute;
+		width: 100px;
+    	top: -100px;
+    	left: 350px;
+	}
+	#item-two{
+		position: absolute;
+		width: 200px;
+    	top: 100px;
+    	left: -350px;
+	}
+	#item-three{
+		position: absolute;
+		width: 200px;
+    	top: 185px;
+    	left: 550px;
+	}
+	#item-four{
+		position: absolute;
+		width: 220px;
+    	top: 185px;
+    	left: 350px;
+	}
+	#item-five{
+		position: absolute;
+		width: 220px;
+    	top: 185px;
+    	left: 350px;
+	}
+	#item-six{
+		position: absolute;
+		width: 250px;
+    	top: 185px;
+    	left: 350px;
 	}
 }

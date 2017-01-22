@@ -12,49 +12,71 @@
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,700' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
-<!-- <div class="hero"><h1>Hello world</h1></div>
- -->
- <!-- ipad size 768 x 1024 -->
-
-
-<div class="ipad-container">
-	<div class="fade">
-		<img class="bkg" src="assets/img/bodyParts.jpg">
-		<div class="container level">
-			<a href="homeScreen.html">
-				<img id="back--button" class="animate" src="assets/img/Arrow-2.png">
-			</a>
-			<div class="gameOne-container">
-				<img class="character" src="assets/img/monster-3.png">
-				<img class="draggable" id="item-one" src="assets/img/bodypart-one.png">
-				<img class="draggable" id="item-two" src="assets/img/bodypart-two.png">
-				<img class="draggable" id="item-three" src="assets/img/bodypart-three.png">
-				<img class="draggable" id="item-four" src="assets/img/bodypart-four.png">
-				<img class="draggable" id="item-five" src="assets/img/bodypart-five.png">
-				<img class="draggable" id="item-six" src="assets/img/bodypart-six.png">
+	<div class="ipad-container">
+		<div class="fade">
+			<img class="bkg" src="assets/img/bodyParts.jpg">
+			<div class="star-container">
+				<img class="star-bkg" src="assets/img/stars-unfilled.png">
+				<img class="star-one invisible" src="assets/img/star-one.png">
+				<img class="star-two invisible" src="assets/img/star-two.png">
+				<img class="star-three invisible" src="assets/img/star-three.png">
+				<img class="star-four invisible" src="assets/img/star-four.png">
+				<img class="star-five invisible" src="assets/img/star-five.png">
+			</div>
+			<div class="container level">
+				<a href="homeScreen.html">
+					<img id="back--button" class="animate" src="assets/img/Arrow-2.png">
+				</a>
+				<div class="gameOne-container">
+					<img class="character" src="assets/img/monster-3.png">
+					<img class="draggable" id="item-one" src="assets/img/bodypart-one.png">
+					<img class="draggable" id="item-two" src="assets/img/bodypart-two.png">
+					<img class="draggable" id="item-three" src="assets/img/bodypart-three.png">
+					<img class="draggable" id="item-four" src="assets/img/bodypart-four.png">
+					<img class="draggable" id="item-five" src="assets/img/bodypart-five.png">
+					<img class="draggable" id="item-six" src="assets/img/bodypart-six.png">
+				</div>
 			</div>
 		</div>
+		<div class="audio">
+			<audio id="audio--arms">
+				<source src="assets/audio/arms.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="audio--nose">
+				<source src="assets/audio/nose.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="audio--eyes">
+				<source src="assets/audio/eyes.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="audio--mouth">
+				<source src="assets/audio/mouth.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="audio--legs">
+				<source src="assets/audio/legs.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="audio--whoops">
+				<source src="assets/audio/whoops.mp3" type="audio/mpeg">
+			</audio>
+			<audio id="audio--nah">
+				<source src="assets/audio/nah.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		<div class="you-win-bkg invisible">
+			<img class="bkg" src="assets/img/finish-screen.jpg">
+			<a class="activateLevelTwo" href="homeScreen.html">
+				<img id="forward--button" class="animate" src="assets/img/Arrow-1.png">
+			</a>
+		</div>
 	</div>
-</div>
-
-<footer></footer>
-
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>	
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase.min.js?v=4"></script>
-<script type="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomWiggle.min.js?v=5"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script> -->
-<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script> -->
-<!-- <script src="assets/js/music.js"></script>
- --><script src="assets/js/animation.js"></script>
+<script src="assets/js/animation.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/utils/Draggable.min.js" type="text/javascript"></script>
 <script src="assets/js/ThrowPropsPlugin.min.js" type="text/javascript"></script>
+<script src="assets/js/levelOne.js" type="text/javascript"></script>
 <script src="assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>

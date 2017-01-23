@@ -1,0 +1,14 @@
+.drag-one{
+  animation-name: hvr-ripple-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes hvr-ripple-out{
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0.2;
+  }
+}

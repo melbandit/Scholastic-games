@@ -1,4 +1,4 @@
-var youWinVal = 0;
+var youWinVal;
 var $star_one = document.querySelector(".star-one");
 var $star_two = document.querySelector(".star-two");
 var $star_three = document.querySelector(".star-three");

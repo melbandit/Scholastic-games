@@ -19,6 +19,48 @@
 // 		margin-left: 84px;
 // 	}
 // }
+.gameTwo-container.draggable{
+	position: absolute;
+	top: 100px;
+	left: 560px;
+	z-index: 1;
+	.item-one{
+	}
+	.item-two{
+
+	}
+	.item-three{
+
+	} 
+	.item-four{
+
+	}
+	.item-five{
+	}
+	.drag-one, .drag-two{
+		transform: scale(1);
+	}
+}
+
+.gameTwo-container.droppable{
+	position: absolute;
+	top: 230px;
+	left: 60px;
+	// .drop-one, .drop-two, .drop-three, .drop-four, .drop-five{
+	// 	position: absolute;
+	// }
+	// .drop-one, .drop-two{
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left:0;
+	// 	width: 80px;
+	// 	height: 80px;
+	// 	padding: 20px;
+	// }
+	p{
+	 color: white;
+	}
+}
 .ipad-container{
 	@include bp-md{
 		position: relative;
@@ -39,7 +81,6 @@
 	//     left: 84px;
 	// }
 }
-
 #draggable { 
 	width: 100px; 
 	height: 100px; 
@@ -55,7 +96,6 @@
 	margin: 10px; 
 	background-color: #2a556d;
 }
-
 #box1{
 	width: 100px;
 	height: 100px;

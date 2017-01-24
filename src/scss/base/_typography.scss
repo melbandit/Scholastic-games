@@ -2,7 +2,7 @@ body{
 	font-family: "Cachet Book", 'san serif';
 	background-color: black;
 	@include bp-md{
-		background-color: white;
+		background-color: #444;
 	}
 }
 @font-face {

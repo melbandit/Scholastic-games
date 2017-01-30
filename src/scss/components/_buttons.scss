@@ -3,6 +3,7 @@
   width: 80px;
   top: 40px;
   left: 40px;
+  transition-duration: 1s;
   &:hover{
     transform: scale(1.1);
   }
@@ -15,8 +16,60 @@ a.disable {
    cursor: default;
 }
 #draggable-one{
-  width: 80px;
-  height: auto;
+    width: 80px;
+    height: auto;
+}
+.arrow{
+    position: absolute;
+    width: 120px;
+    height: auto;
+    right: 60px;
+    bottom: 35px;
+    transition-duration: 1s;
+    &:hover{
+        //transform-duration: 1s;
+        transform: scale(1.1);
+        transform-origin: 50% 50%;
+    }
+}
+.parent-num{
+    border: 0px;
+    border-radius: 34px;
+    background-color: rgba(1,3,5,0);
+    padding: 20px;
+    img{
+        width: 55px;
+        transition-duration: 1s;
+        &:hover{
+            //transform-duration: 1s;
+            transform: scale(1.05);
+            transform-origin: 50% 50%;
+        }
+    }
+    &:hover{
+        //transform-duration: 1s;
+        transform: scale(1.05);
+        transform-origin: 50% 50%;
+    }
+}
+.nums{
+    float: left;
+    margin-left: 20px;
+    margin-top: 280px;
+    width: 300px;
+    padding: 20px;
+}
+
+.cancel{
+    position: absolute;
+    width: 75px;
+    transition-duration: 1s;
+    &:hover{
+        //transform-duration: 1s;
+        transform: scale(1.1);
+        transform-origin: 50% 50%;
+    }
+  //top: 40px;
 }
 // .button{
 // 	position: absolute;
@@ -43,6 +96,11 @@ a.disable {
 //   -moz-transition-timing-function: cubic-bezier(100,50,21,6);
 // }
 //default button
+a.btn{
+    position: absolute;
+    top: 650px;
+    left: 650px;
+}
 .btn {
   // color: #fff;
   // cursor: pointer;

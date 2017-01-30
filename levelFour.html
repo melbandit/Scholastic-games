@@ -3,11 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>jQuery UI Sortable - Default functionality</title>
+    <title>Level Four - Numbers</title>
     <!-- CSS --> 
     <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <style>
     #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
     #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
@@ -24,16 +23,62 @@
 </head>
 <body>
 <div class="ipad-container">
-  <div class="container-padding">
-    <ul id="sortable">
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
-    </ul>
+    <div class="fade">
+        <img class="bkg" src="assets/img/level-four/Numbers.jpg">
+        <img class="bkg-characters" src="assets/img/level-four/characters.png">
+        <!-- <div class="container-padding">
+            <ul id="sortable">
+                <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img src=""></li>
+                <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+                <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+                <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+                <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+                <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+                <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+            </ul>
+        </div> -->
+        <div class="star-container">
+            <img class="star-bkg" src="assets/img/stars-unfilled.png">
+            <img class="star-one invisible" src="assets/img/star-one.png">
+            <img class="star-two invisible" src="assets/img/star-two.png">
+            <img class="star-three invisible" src="assets/img/star-three.png">
+            <img class="star-four invisible" src="assets/img/star-four.png">
+            <img class="star-five invisible" src="assets/img/star-five.png">
+        </div>
+        <div class="container level">
+            <a href="homeScreen.html">
+                <img id="back--button" class="animate" src="assets/img/Arrow-2.png">
+            </a>
+            <div class="numbers-container">
+                <div id="numbers">
+                    <img class="number-one invisible" src="assets/img/level-four/1.png">
+                    <img class="number-two invisible" src="assets/img/level-four/2.png">
+                    <img class="number-three" src="assets/img/level-four/3.png">
+                    <img class="number-four invisible" src="assets/img/level-four/4.png">
+                    <img class="number-five invisible" src="assets/img/level-four/5.png">
+                </div>
+            </div>
+            <div class="numbers">
+                <div class="choices--numbers">
+                    <img class="number number-one" src="assets/img/level-four/1_space_ship.png">
+                    <img class="number number-two" src="assets/img/level-four/2_planets.png">
+                    <img class="number number-three" src="assets/img/level-four/3_shooting_stars.png">
+                    <img class="number number-four" src="assets/img/level-four/4_Rockets.png">
+                    <img class="number number-five" src="assets/img/level-four/5_astroids.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="audio">
+        <audio id="audio--match">
+            <source src="assets/audio/match.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="you-win-bkg invisible">
+        <img class="bkg" src="assets/img/finish-screen.jpg">
+        <a class="activateLevelTwo" href="homeScreen.html">
+            <img id="forward--button" class="animate" src="assets/img/Arrow-1.png">
+        </a>
     </div>
 </div>
  

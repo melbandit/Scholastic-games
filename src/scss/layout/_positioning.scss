@@ -17,6 +17,12 @@
 	top: 455px;
 	transform: rotateZ(12deg);
 }
+.bkg-characters{
+	position: absolute;
+	top: 522px;
+	left: 25px;
+	transform: rotateZ(5deg);
+}
 .star-container{
 	position: absolute;
     top: 10px;
@@ -37,6 +43,28 @@
     	transform: scale(0);
     	z-index: 1;
     }
+}
+#parent-pwd{
+	position: absolute;
+    top: 259px;
+    left: 112px;
+    transform: rotateZ(1deg);
+    width: 180px;
+    height: 27px;
+    border-radius: 10px;
+    background-color: #f6fbfd;
+}
+.drop{
+	position: absolute;
+	top: 0;
+	left: 40px
+}
+.drag{
+	position: absolute;
+}
+.drag-correct{
+	position: absolute;
+	left: 0px;
 }
 .invisible{
 	opacity: 0;

@@ -1,3 +1,25 @@
+function myFunction(event) {
+    var x = event.value;
+    document.querySelector("parent-pwd").innerHTML = x;
+}
+// <input type="text" onkeydown="myFunction(event)"> 
+
+// function myFunction(event) {
+//     var x = event.keyCode;
+//     if (x == 112) {  // 27 is the ESC key
+//         alert ("You pressed the Escape key!");
+//     }
+// }
+// $('#one').val('1');
+// $('#two').val('2');
+// $('#three').val('3');
+// $('#four').val('4');
+// $('#five').val('5');
+// $('#six').val('6');
+// $('#seven').val('7');
+// $('#eight').val('8');
+// $('#nine').val('9');
+
 //drag and drop
 // $( function() {
 // 	$( ".draggable" ).draggable();

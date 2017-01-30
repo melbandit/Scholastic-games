@@ -14,28 +14,38 @@
 // }
 // .container-padding{
 // 	@include bp-md{
-// 		position: absolute;
+// 		position: absolute;s
 // 		margin-top: 46px;
 // 		margin-left: 84px;
 // 	}
 // }
+.form-container{
+	position: absolute;
+	top: 28px;
+	left: 332px;
+	z-index: 5;
+}
 .gameTwo-container.draggable{
 	position: absolute;
-	top: 100px;
-	left: 560px;
+	top: 0px;
+	left: 500px;
 	z-index: 1;
-	.item-one{
+	img{
+		padding: 30px;
 	}
-	.item-two{
+	.drag-one{
 
 	}
-	.item-three{
+	.drag-two{
+
+	}
+	.drag-three{
 
 	} 
-	.item-four{
+	.drag-four{
 
 	}
-	.item-five{
+	.drag-five{
 	}
 	.drag-one, .drag-two{
 		transform: scale(1);

@@ -59,7 +59,20 @@ a.disable {
     width: 300px;
     padding: 20px;
 }
-
+.parent-home-cancel{
+    position: absolute;
+    top: 27px;
+    left: 40px;
+    width: 100px;
+    z-index: 5;
+    transition-duration:1s;
+    &:hover{
+        //transform-duration: 1s;
+        transform: scale(1.1);
+        transform-origin: 50% 50%;
+    }
+  //top: 40px;
+}
 .cancel{
     position: absolute;
     width: 75px;
@@ -70,6 +83,24 @@ a.disable {
         transform-origin: 50% 50%;
     }
   //top: 40px;
+}
+.social-container{
+  img{
+    height: 150px;
+    padding: 65px;
+    transition-duration:1s;
+    &:hover{
+        //transform-duration: 1s;
+        transform: scale(1.1);
+        transform-origin: 50% 50%;
+    }
+  }
+}
+.level-container{
+  img{
+    height: 40px;
+    padding: 76px 93px 90px 76px;
+  }
 }
 // .button{
 // 	position: absolute;

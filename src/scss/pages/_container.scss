@@ -19,6 +19,20 @@
 // 		margin-left: 84px;
 // 	}
 // }
+.parent-home-container{
+	position: absolute;
+	left: 150px;
+	top: 240px;
+	z-index: 5;
+	.social-container{
+		float: left;
+		//margin: 0 auto;
+	}
+	.level-container{
+		float: left;
+	}
+}
+
 .form-container{
 	position: absolute;
 	top: 28px;

@@ -11,9 +11,6 @@
 		transform-origin: 50% 50%;
 	}
 }
-// div{
-// 	transition: 1s;
-// }
 .bkg{
 	width: 1024px;
 }
@@ -30,24 +27,42 @@
 	position: absolute;
 	z-index: -1;
 }
-#pageone{
-	background-color: none;
-}
-#pagetwo{
-	background-color: none;
-}
 .choices{
-	position: absolute;
-	top: 60px;
-	left: 750px;
+	// position: absolute;
+	// top: 60px;
+	// left: 750px;
 	//width: 240px;
 	.choices--colors{
-		float: left;
-		width: 240px;
+		//float: left;
+		//width: 240px;
+		// .color{
+		// 	position: absolute;
+		// 	top: 60px;
+		// 	left: 750px;
+		// 	width: 80px;
+		// 	padding-right: 37px;
+		// 	padding-bottom: 30px;
+		// }
 		.color{
+			width: 80px;
+		}
+		.color-left{
+			position: absolute;
+			left: 850px;
+		}
+		.color-right{
+			position: absolute;
+			top: 60px;
+			left: 700px;
 			width: 80px;
 			padding-right: 37px;
 			padding-bottom: 30px;
+		}
+		.color-one, .color-six{
+			top: 60px;
+		}
+		.color-five, .color-ten{
+			top: 620px;
 		}
 	}
 }

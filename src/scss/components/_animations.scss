@@ -1,20 +1,40 @@
+#bird{
+  background: transparent url(../img/bird_180x180.png) 0 0 no-repeat;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 180px;
+  height: 123px;
+  z-index: 10;
+}
 .numbers{
   animation-name: wiggle-y;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
-// .choices{
-//   animation-name: wiggle;
-//   animation-duration: 1.5s;
-//   //animation-delay: 1s;
-//   animation-iteration-count: infinite;
-// }
+#item-one, #item-three, #item-four, #item-five, #item-six{
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+#item-three{
+  animation-delay: 0.5s;
+}
+#item-four{
+  animation-delay: 1s;
+}
+#item-five{
+  animation-delay: 1.5s;
+}
+#item-six{
+  animation-delay: 0.25s;
+}
 // .color{
 //   animation-name: hvr-pad;
 // }
 #thoughts{
   animation-name: zoom-in;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   transform-origin: 50% 50%;
   //animation-iteration-count: ;
 }
@@ -24,6 +44,14 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes rotate{
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 @keyframes hvr-pad{

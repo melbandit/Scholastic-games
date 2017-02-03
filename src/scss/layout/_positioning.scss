@@ -1,3 +1,45 @@
+video{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#sortable { 
+	position: absolute; 
+	top: 0px; 
+	left: -10px; 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 100%; 
+	z-index: 1;
+}
+#border-section{
+	position: absolute; 
+	left: -12px;
+	border: 5px dotted #263751;
+	transition-duration: 1s;
+	&:hover{
+		border: 5px dotted #FFF;
+	}
+	#border{
+		width: 600px;
+		height: 100px;
+	}
+}
+
+#sortable li {
+	background: none;
+    border: none;
+	//margin: 0 3px 3px 3px; 
+	padding: 0.4em; 
+	//padding-left: 1.5em;
+	height: 85px; 
+}
+.ui-icon{
+	background-image: none;
+}
+//#sortable li span { position: absolute; top: 20px; left: 300px; margin-left: -1.3em; }
+
 #character{
 	position: absolute;
 	width: 250px;
@@ -67,7 +109,7 @@
 	left: 0px;
 }
 .invisible{
-	opacity: 0;
+	display: none;
 	z-index: -1;
 }
 .back--button{
@@ -94,6 +136,7 @@
 .you-win-bkg{
 	position: absolute;
 	top: 0;
+	z-index:2;
 }
 .games-container{
 	position: absolute;
@@ -107,17 +150,56 @@
 	    height: auto;
 	}
 }
+.bkg-character{
+	position: absolute;
+    top: 516px;
+    width: 300px;
+    left: 34px;
+    transform: rotateZ(15deg);
+}
 .gameOne-container{
+
 	.character{
 		position: absolute;
-    	top: 185px;
-    	left: 350px;
+		width: 350px;
+    	top: 285px;
+    	left: 330px;
+	}
+	.eyes{
+		z-index: 1;
+    	width: 415px;
+	    top: 185px;
+	    left: 304px;
+    	opacity: 0;
+	}
+	.nose{
+		z-index: 2;
+	    width: 30px;
+	    top: 368px;
+	    left: 480px;
+	    opacity: 0;
+	}
+	.legs{
+		width: 250px;
+		left: 380px;
+    	top: 421px;
+		opacity: 0;
+	}
+	.arms{
+		width: 467px;
+	    left: 290px;
+	    top: 405px;
+	    opacity: 0;
+	}
+	.mouth{
+		z-index: 1;
+		opacity: 0;
 	}
 	#item-one{
 		position: absolute;
-		width: 100px;
-    	top: 100px;
-    	left: 350px;
+		width: 150px;
+    	top: 150px;
+    	left: 150px;
 	}
 	#item-two{
 		position: absolute;
@@ -127,26 +209,29 @@
 	}
 	#item-three{
 		position: absolute;
-		width: 200px;
-    	top: 65px;
-    	left: 650px;
+		width: 180px;
+    	top: 265px;
+    	left: 741px;
 	}
 	#item-four{
 		position: absolute;
 		width: 220px;
-    	top: 385px;
-    	left: 650px;
+    	top: 562px;
+    	left: 578px;
 	}
 	#item-five{
 		position: absolute;
-		width: 100px;
-    	top: 555px;
-    	left: 50px;
+		width: 250px;
+    	top: 118px;
+    	left: 509px;
 	}
 	#item-six{
 		position: absolute;
 		width: 250px;
-    	top: 385px;
+    	top: 500px;
     	left: 50px;
+	}
+	.opacity{
+		opacity:1;
 	}
 }

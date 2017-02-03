@@ -11,7 +11,6 @@ var $item_five = document.querySelector("item-five");
 var $audio_match = document.getElementById("audio--match");
 var $audio_whoops = document.getElementById("audio--whoops");
 var $audio_nah = document.getElementById("audio--nah");
-var $link_two = document.querySelector("link-two");
 var $activate_level_three = document.querySelector("activateLevelThree");
 var $drop_one = document.querySelector(".drop-one");
 var $drop_two = document.querySelector(".drop-two");
@@ -45,20 +44,20 @@ window.onload = function() {
     revealShapeFour();
     revealShapeFive();
 }
-function youWinVal(){
-    console.log("working");
-    if(youWinVal === 1){
-        console.log("youWinVal worked");
-        $link_two.setAttribute("class", "link-two");
-    }
-}
-function youWin(){
-    console.log("You Win!!");
-    youWinVal++;
-    $youWin_bkg.setAttribute("class", "you-win-bkg");
-    console.log(youWinVal);
-    //youWinVal();
-}
+// function youWinVal(){
+//     console.log("working");
+//     if(youWinVal === 1){
+//         console.log("youWinVal worked");
+//         $link_two.setAttribute("class", "link-two");
+//     }
+// }
+// function youWin(){
+//     console.log("You Win!!");
+//     youWinVal++;
+//     $youWin_bkg.setAttribute("class", "you-win-bkg");
+//     console.log(youWinVal);
+//     //youWinVal();
+// }
 function revealShape(){
     $( function() {
         $( "#droppable-one" ).droppable({
@@ -138,7 +137,7 @@ function revealShapeFive(){
                     $drag_three.setAttribute("class", "invisible");
                     $drag_four.setAttribute("class", "invisible");
                     $drag_five.setAttribute("class", "invisible");
-                    window.setTimeout( youWin, 1000 );
+                    window.setTimeout( youWinLevelTwo, 1000 );
             }
         });
     });

@@ -1,3 +1,24 @@
+// Start of Color animation
+var left = getRandom(700, 710);
+var right = getRandom(820, 830);
+var delay = getRandom(1, 2.5);
+//basic illustration of TweenMax's repeat, repeatDelay, yoyo and onRepeat
+//var color = document.querySelectorAll('.color');
+function getRandom(min, max) {
+    return min + Math.random() * (max - min);
+}
+TweenMax.to(".color-one", 1, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
+TweenMax.to(".color-two", 1.5, {left:left+"px", yoyo:true, delay: 2, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
+TweenMax.to(".color-three", 1, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
+TweenMax.to(".color-four", 1, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
+TweenMax.to(".color-five", 1.5, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
+TweenMax.to(".color-six", 1, {left:left+"px", yoyo:true, delay: 4, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
+TweenMax.to(".color-seven", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
+TweenMax.to(".color-eight", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
+TweenMax.to(".color-eight", 2, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
+TweenMax.to(".color-nine", 2, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
+TweenMax.to(".color-ten", 2, {left:right+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: delay, ease:Linear.easeNone});
+// End of Color animation
 var youWinVal;
 var $star_one = document.querySelector(".star-one");
 var $star_two = document.querySelector(".star-two");
@@ -23,26 +44,17 @@ var $drop_seven = document.querySelector(".drop-two");
 var $drop_eight = document.querySelector(".drop-three");
 var $drop_nine = document.querySelector(".drop-four");
 var $drop_ten = document.querySelector(".drop-five");
-var $drag_one = document.querySelector(".drag-one");
-var $drag_two = document.querySelector(".drag-two");
-var $drag_three = document.querySelector(".drag-three");
-var $drag_four = document.querySelector(".drag-four");
-var $drag_five = document.querySelector(".drag-five");
 window.onload = function() {
-    // $(".fade").css("display", "none");
-    // $(".fade").fadeIn(2000);
-    // TweenMax.to(".back--button", 1, {scaleX:5, scaleY:5});
-    // TweenMax.to("#item-one", 0.5, {top: 50});
-    // TweenMax.to("#item-two", 0.75, {left: 550, delay: 0.25});
-    // TweenMax.from("#item-three", 1, {top: 250, alpha: 0, delay: 0.5});
-    // TweenMax.from("#item-four", 1, {top: 330, alpha: 0, delay: 1});
-    // TweenMax.from("#item-six", 1, {alpha: 0, delay: 2});
-    //document.body.className = "animate";
     $( "#draggable-one" ).draggable();
     $( "#draggable-two" ).draggable();
     $( "#draggable-three" ).draggable();
     $( "#draggable-four" ).draggable();
     $( "#draggable-five" ).draggable();
+    $( "#draggable-six" ).draggable();
+    $( "#draggable-seven" ).draggable();
+    $( "#draggable-eight" ).draggable();
+    $( "#draggable-nine" ).draggable();
+    $( "#draggable-ten" ).draggable();
     $audio_match.play();
     revealShape();
     revealShapeTwo();
@@ -50,20 +62,20 @@ window.onload = function() {
     revealShapeFour();
     revealShapeFive();
 }
-function youWinVal(){
-    console.log("working");
-    if(youWinVal === 1){
-        console.log("youWinVal worked");
-        $link_two.setAttribute("class", "link-two");
-    }
-}
-function youWin(){
-    console.log("You Win!!");
-    youWinVal++;
-    $youWin_bkg.setAttribute("class", "you-win-bkg");
-    console.log(youWinVal);
-    //youWinVal();
-}
+// function youWinVal(){
+//     console.log("working");
+//     if(youWinVal === 1){
+//         console.log("youWinVal worked");
+//         $link_two.setAttribute("class", "link-two");
+//     }
+// }
+// function youWin(){
+//     console.log("You Win!!");
+//     youWinVal++;
+//     $(".you-win-bkg").removeClass("invisible");
+//     //console.log(youWinVal);
+//     //youWinVal();
+// }
 function revealShape(){
     $( function() {
         $( "#droppable-one" ).droppable({
@@ -74,7 +86,6 @@ function revealShape(){
                 TweenMax.to(".star-one", 1, {scale:1});
                 TweenMax.from(".drag-one", 1, {scale:0});
                 $drop_one.setAttribute("class", "invisible");
-                // $drag_one.setAttribute("class", "invisible");
                 $drop_two.setAttribute("class", "drop-two");
             }
         });
@@ -90,7 +101,6 @@ function revealShapeTwo(){
                 TweenMax.to(".star-two", 1, {scale:1});
                 TweenMax.from(".drag-two", 1, {scale:0});
                 $drop_two.setAttribute("class", "invisible");
-                // $drag_two.setAttribute("class", "invisible");
                 $drop_three.setAttribute("class", "drop-two");
             }
         });
@@ -106,7 +116,6 @@ function revealShapeThree(){
                     TweenMax.to(".star-three", 1, {scale:1});
                     TweenMax.from(".drag-three", 1, {scale:0});
                     $drop_three.setAttribute("class", "invisible");
-                    // $drag_three.setAttribute("class", "invisible");
                     $drop_four.setAttribute("class", "drop-three");
             }
         });
@@ -122,7 +131,6 @@ function revealShapeFour(){
                     TweenMax.to(".star-four", 1, {scale:1});
                     TweenMax.from(".drag-four", 1, {scale:0});
                     $drop_four.setAttribute("class", "invisible");
-                    // $drag_four.setAttribute("class", "invisible");
                     $drop_five.setAttribute("class", "drop-four");
             }
         });
@@ -137,13 +145,8 @@ function revealShapeFive(){
                     $star_five.setAttribute("class", "star-five");
                     TweenMax.to(".star-five", 0.5, {scale:1});
                     TweenMax.from(".drag-five", 0.5, {scale:0});
-                    $drop_five.setAttribute("class", "invisible");
-                    $drag_one.setAttribute("class", "invisible");
-                    $drag_two.setAttribute("class", "invisible");
-                    $drag_three.setAttribute("class", "invisible");
-                    $drag_four.setAttribute("class", "invisible");
-                    $drag_five.setAttribute("class", "invisible");
-                    window.setTimeout( youWin, 1000 );
+                    window.setTimeout( youWinLevelThree, 1000 );
+                    console.log("did it!");
             }
         });
     });

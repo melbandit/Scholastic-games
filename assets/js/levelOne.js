@@ -1,16 +1,21 @@
+$('#bird').sprite({fps: 12, no_of_frames: 3});
+
 var youWinVal;
 var $star_one = document.querySelector(".star-one");
 var $star_two = document.querySelector(".star-two");
 var $star_three = document.querySelector(".star-three");
 var $star_four = document.querySelector(".star-four");
 var $star_five = document.querySelector(".star-five");
+
 var $youWin_bkg = document.querySelector(".you-win-bkg");
+
 var $item_one = document.getElementById("item-one");
-var $item_two = document.getElementById("item-two");
+var $item_two = document.getElementById("item-two");//never used
 var $item_three = document.getElementById("item-three");
 var $item_four = document.getElementById("item-four");
 var $item_five = document.getElementById("item-five");
 var $item_six = document.getElementById("item-six");
+
 var $audio_arms = document.getElementById("audio--arms");
 var $audio_nose = document.getElementById("audio--nose");
 var $audio_mouth = document.getElementById("audio--mouth");
@@ -19,6 +24,7 @@ var $audio_eyes = document.getElementById("audio--eyes");
 var $audio_whoops = document.getElementById("audio--whoops");
 var $audio_nah = document.getElementById("audio--nah");
 var $link_two = document.querySelector("link-two");
+
 var $activate_level_two = document.querySelector("activateLevelTwo");
 window.onload = function() {
     console.log(youWinVal);
@@ -51,6 +57,7 @@ function audioOnePlay(){
         $audio_nose.play();
         $item_one.setAttribute("class", "invisible");
         audioTwoPlay();
+        $(".arms").addClass("opacity");
     });
     // $item_two.addEventListener("click", function(){
     //     $audio_whoops.play();
@@ -66,20 +73,20 @@ function audioOnePlay(){
     // });
 }
     // $thing.setAttribute("class", "thing active");
-function youWinVal(){
-    console.log("working");
-    if(youWinVal === 1){
-        console.log("youWinVal worked");
-        $link_two.setAttribute("class", "link-two");
-    }
-}
-function youWin(){
-    console.log("You Win!!");
-    youWinVal++;
-    $youWin_bkg.setAttribute("class", "you-win-bkg");
-    console.log(youWinVal);
-    youWinVal();
-}
+// function youWinVal(){
+//     console.log("working");
+//     if(youWinVal === 1){
+//         console.log("youWinVal worked");
+//         $link_two.setAttribute("class", "link-two");
+//     }
+// }
+// function youWin(){
+//     console.log("You Win!!");
+//     youWinVal++;
+//     $youWin_bkg.setAttribute("class", "you-win-bkg");
+//     console.log(youWinVal);
+//     youWinVal();
+// }
 function audioTwoPlay(){
         console.log("audio Two played");
     $item_five.addEventListener("click", function(){
@@ -91,6 +98,7 @@ function audioTwoPlay(){
         $audio_mouth.play();
         $item_five.setAttribute("class", "invisible");
         audioThreePlay();
+        $(".nose").addClass("opacity");
     });
 }
 function audioThreePlay(){
@@ -104,6 +112,7 @@ function audioThreePlay(){
         $audio_eyes.play();
         $item_four.setAttribute("class", "invisible");
         audioFourPlay();
+        $(".mouth").addClass("opacity");
     });
 }
 function audioFourPlay(){
@@ -117,6 +126,7 @@ function audioFourPlay(){
         $audio_legs.play();
         $item_six.setAttribute("class", "invisible");
         audioFivePlay();
+        $(".eyes").addClass("opacity");
     });
 }
 function audioFivePlay(){
@@ -128,6 +138,7 @@ function audioFivePlay(){
     });
     $item_three.addEventListener("mouseup", function(){
         $item_three.setAttribute("class", "invisible");
-        window.setTimeout( youWin, 2000 );
+        $(".legs").addClass("opacity");
+        window.setTimeout( youWinLevelOne, 2000 );
     });
 }

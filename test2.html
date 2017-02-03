@@ -13,77 +13,31 @@
 	<link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,700' rel='stylesheet' type='text/css'>
 </head>
 
+  <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  #sortable li span { position: absolute; margin-left: -1.3em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+</head>
 <body>
- <!-- ipad size 768 x 1024 -->
-<div class="ipad-container">
-	<img class="bkg" src="assets/img/homeScreen.jpg">
-	<div data-role="page" id="pageone">
-		<div data-role="main" class="ui-content container home-screen" >
-			<div class="character-container">
-				<img id="speech" src="assets/img/bubble.png">
-				<img id="character" src="assets/img/monster-3.png">
-				<img id="ship" src="assets/img/spaceship.png">
-			</div>
-			<div class="games-container">
-				<a href="levelOne.html">
-					<img class="game-one" src="assets/img/body-selections.png">
-				</a>
-				<img class="game-two" src="assets/img/shapes.png">
-				<img class="game-three" src="assets/img/colors.png">
-				<img class="game-four" src="assets/img/counting.png">
-			</div>
-			<a href="#pagetwo" class="btn btn-1">
-		      	<svg>
-		        	<rect x="0" y="0" fill="none" width="100%" height="100%"/>
-		      	</svg>
-		    <p>PARENTS</p>
-		    </a>
-			<!-- <div class="button--parents">
-				<div class="button">PARENTS</button>
-			</div> -->
-		</div>
-	</div>
-	<div data-role="page" id="pagetwo">
-		<div data-role="main" class="ui-content container home-screen">
-			<button><a href="homeScreen.html">X</a></button>
-			<!-- <div class="character-container">
-				<img id="speech" src="assets/img/bubble.png">
-				<img id="character" src="assets/img/monster-3.png">
-				<img id="ship" src="assets/img/spaceship.png">
-			</div>
-			<div class="games-container">
-				<a href="levelOne.html">
-					<img class="game-one" src="assets/img/body-selections.png">
-				</a>
-				<img class="game-two" src="assets/img/shapes.png">
-				<img class="game-three" src="assets/img/colors.png">
-				<img class="game-four" src="assets/img/counting.png">
-			</div> -->
-			<!-- <div class="button--parents">
-				<div class="button">PARENTS</button>
-			</div> -->
-		</div>
-	</div>
-	<!-- <img class="moon" src="assets/img/moon.png"> -->
-<!-- 	<div class="container-padding">
-	<a href="levelOne.html"><div class="col-one">
-		<img src="assets/img/monster-1.png">
-	</div></a>
-	<a href="levelTwo.html">
-		<div class="col-two">
-		<img src="assets/img/monster-2.png">
-		col2
-		</div>
-	</a>
-	<div class="col-three">
-	<img src="assets/img/monster-3.png">
-	col3
-	</div>
- -->
-	</div>
-</div>
-
-<footer></footer>
+ 
+<ul id="sortable">
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>	

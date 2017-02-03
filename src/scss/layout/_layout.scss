@@ -28,21 +28,7 @@
 	z-index: -1;
 }
 .choices{
-	// position: absolute;
-	// top: 60px;
-	// left: 750px;
-	//width: 240px;
 	.choices--colors{
-		//float: left;
-		//width: 240px;
-		// .color{
-		// 	position: absolute;
-		// 	top: 60px;
-		// 	left: 750px;
-		// 	width: 80px;
-		// 	padding-right: 37px;
-		// 	padding-bottom: 30px;
-		// }
 		.color{
 			width: 80px;
 		}
@@ -61,6 +47,15 @@
 		.color-one, .color-six{
 			top: 60px;
 		}
+		.color-two, .color-seven{
+			top: 200px;
+		}
+		.color-three, .color-eight{
+			top: 360px;
+		}
+		.color-four, .color-nine{
+			top: 500px;
+		}
 		.color-five, .color-ten{
 			top: 620px;
 		}
@@ -77,23 +72,23 @@
 			height: 80px;
 		}
 		.number-one{
-			padding: 0 180px;
+			padding: 0 234px;
 		}
 		.number-two{
 			height: 70px;
-			padding: 5px 85px;
+			padding: 5px 153px;
 		}
 		.number-three{
 			height: 90px;
-			padding: 0px 55px;
+			padding: 0px 100px;
 		}
 		.number-four{
-			height: 110px;
-			padding: 5px 35px;
+			height: 100px;
+			padding: 5px 83px;
 		}
 		.number-five{
 			height: 80px;
-			padding: 5px 0px;
+			padding: 10px 0px;
 		}
 	}
 }
@@ -109,9 +104,10 @@
 #thoughts{
 	position: absolute;
 	top: 140px;
-	left: 200px;
+	left: 80px;
 	img{
-		position: absolute;
-		width: 150px;
+		//position: absolute;
+		width: 200px;
+		padding: 0 120px;
 	}
 }

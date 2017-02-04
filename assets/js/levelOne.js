@@ -54,6 +54,7 @@ function audioOnePlay(){
         TweenMax.from("#item-one", 1, {scale:0});
     });
     $item_one.addEventListener("mouseup", function(){
+        $audio_arms.pause();
         $audio_nose.play();
         $item_one.setAttribute("class", "invisible");
         audioTwoPlay();
@@ -95,6 +96,7 @@ function audioTwoPlay(){
         TweenMax.from("#item-five", 1, {scale:0});
     });
     $item_five.addEventListener("mouseup", function(){
+        $audio_nose.pause();
         $audio_mouth.play();
         $item_five.setAttribute("class", "invisible");
         audioThreePlay();
@@ -109,6 +111,7 @@ function audioThreePlay(){
         TweenMax.from("#item-four", 1, {scale:0});
     });
     $item_four.addEventListener("mouseup", function(){
+        $audio_mouth.pause();
         $audio_eyes.play();
         $item_four.setAttribute("class", "invisible");
         audioFourPlay();
@@ -123,6 +126,7 @@ function audioFourPlay(){
         TweenMax.from("#item-six", 1, {scale:0});
     });
     $item_six.addEventListener("mouseup", function(){
+        $audio_eyes.pause();
         $audio_legs.play();
         $item_six.setAttribute("class", "invisible");
         audioFivePlay();
@@ -137,6 +141,7 @@ function audioFivePlay(){
         TweenMax.from("#item-three", 1, {scale:0});
     });
     $item_three.addEventListener("mouseup", function(){
+        $audio_legs.pause();
         $item_three.setAttribute("class", "invisible");
         $(".legs").addClass("opacity");
         window.setTimeout( youWinLevelOne, 2000 );

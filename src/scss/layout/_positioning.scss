@@ -104,6 +104,25 @@ video{
 .drag{
 	position: absolute;
 }
+#one-pos{
+	top: 250px;
+}
+#two-pos{
+	top: 450px;
+    left: 200px;
+}
+#three-pos{
+	top: 102px;
+    left: 200px;
+}
+#four-pos{
+	top: 400px;
+    left: -226px;
+}
+#five-pos{
+    top: 100px;
+    left: -224px;
+}
 .drag-correct{
 	position: absolute;
 	left: 0px;

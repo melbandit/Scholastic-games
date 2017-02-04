@@ -58,6 +58,11 @@ window.onload = function() {
 //     console.log(youWinVal);
 //     //youWinVal();
 // }
+function youWinLevelTwo(){
+    console.log("You Win!!");
+    localStorage.setItem("level2complete", 2);
+    $youWin_bkg.setAttribute("class", "you-win-bkg");
+}
 function revealShape(){
     $( function() {
         $( "#droppable-one" ).droppable({

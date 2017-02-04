@@ -46,6 +46,12 @@ window.onload = function() {
 //correct item choosen spins and zooms off the screen
     //add star to first position.
     //start next audio, call function.
+
+function youWinLevelOne(){
+    console.log("You Win Lovel One!!");
+    localStorage.setItem("level1complete", 1);
+    $youWin_bkg.setAttribute("class", "you-win-bkg");
+}
 function audioOnePlay(){
     console.log("audio played");
     $item_one.addEventListener("click", function(){

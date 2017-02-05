@@ -28,7 +28,7 @@ function youWin(){
     console.log("You Win!!");
    // youWinVal++;
     $youWin_bkg.setAttribute("class", "you-win-bkg");
-    console.log(youWinVal);
+    //console.log(youWinVal);
     //youWinVal();
 }
 

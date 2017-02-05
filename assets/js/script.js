@@ -1,3 +1,5 @@
+$('#neba-char').sprite({fps: 2, no_of_frames: 5});
+
 //sessionStorage.clear();
 //localStorage.clear();
 

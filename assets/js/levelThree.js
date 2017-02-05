@@ -1,4 +1,6 @@
 // Start of Color animation
+$('#iggy-char').sprite({fps: 4, no_of_frames: 7});
+
 var left = getRandom(700, 710);
 var right = getRandom(820, 830);
 var delay = getRandom(1, 2.5);

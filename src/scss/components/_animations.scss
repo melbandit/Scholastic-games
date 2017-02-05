@@ -1,10 +1,19 @@
-#bird{
-  background: transparent url(../img/bird_180x180.png) 0 0 no-repeat;
+#neba-char{
+  background: transparent url(../img/neba-char.png) 0 0 no-repeat;
   position: absolute;
-  top: 0;
-  left: 100px;
-  width: 180px;
-  height: 123px;
+  top: 359px;
+  left: 60px;
+  width: 241px;
+  height: 300px;
+  z-index: 10;
+}
+#iggy-char{
+  background: transparent url(../img/iggy-char.png) 0 0 no-repeat;
+  position: absolute;
+  top: 480px;
+  left: 60px;
+  width: 184px;
+  height: 230px;
   z-index: 10;
 }
 #back--button{

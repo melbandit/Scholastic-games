@@ -1,3 +1,8 @@
+//$('#purple-char').sprite({fps: 5, no_of_frames: 5, play_frames: 0});
+$('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
+$('#purple-char-2').sprite({fps: 2, no_of_frames: 5});
+$('#neba-char-2').sprite({fps: 2, no_of_frames: 5});
+
 var youWinVal;
 var $star_one = document.querySelector(".star-one");
 var $star_two = document.querySelector(".star-two");
@@ -70,7 +75,9 @@ function revealShape(){
             drop: function( event, ui ) {
                 accept: ".drag-one",
                 $star_one.setAttribute("class", "star-one");
-                TweenMax.to(".star-one", 1, {scale:1});
+                TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
+                $('#purple-char').sprite({fps: 5, no_of_frames: 5, play_frames: 11});
+                TweenMax.to(".one-pos", 1, {top: 250, left:0});
                 TweenMax.from(".drag-one", 1, {scale:0});
                 $drop_one.setAttribute("class", "invisible");
                 // $drag_one.setAttribute("class", "invisible");
@@ -86,8 +93,10 @@ function revealShapeTwo(){
             drop: function( event, ui ) {
                 accept: ".drag-two",
                 $star_two.setAttribute("class", "star-two");
-                TweenMax.to(".star-two", 1, {scale:1});
+                TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
+                TweenMax.to(".two-pos", 1, {top: 450, left:200});
                 TweenMax.from(".drag-two", 1, {scale:0});
+                $('#purple-char').sprite({fps: 5, no_of_frames: 5, play_frames: 11});
                 $drop_two.setAttribute("class", "invisible");
                 // $drag_two.setAttribute("class", "invisible");
                 $drop_three.setAttribute("class", "drop-two");
@@ -102,7 +111,9 @@ function revealShapeThree(){
                 drop: function( event, ui ) {
                     accept: "#draggable-three",
                     $star_three.setAttribute("class", "star-three");
-                    TweenMax.to(".star-three", 1, {scale:1});
+                    TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
+                    $('#purple-char').sprite({fps: 5, no_of_frames: 5, play_frames: 11});
+                    TweenMax.to(".three-pos", 1, {top: 102, left:200});
                     TweenMax.from(".drag-three", 1, {scale:0});
                     $drop_three.setAttribute("class", "invisible");
                     // $drag_three.setAttribute("class", "invisible");
@@ -118,10 +129,11 @@ function revealShapeFour(){
                 drop: function( event, ui ) {
                     accept: "#draggable-four",
                     $star_four.setAttribute("class", "star-four");
-                    TweenMax.to(".star-four", 1, {scale:1});
+                    TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
+                    TweenMax.to(".four-pos", 1, {top: 400, left:-226});
                     TweenMax.from(".drag-four", 1, {scale:0});
+                    $('#purple-char').sprite({fps: 5, no_of_frames: 5, play_frames: 11});
                     $drop_four.setAttribute("class", "invisible");
-                    // $drag_four.setAttribute("class", "invisible");
                     $drop_five.setAttribute("class", "drop-four");
             }
         });
@@ -134,7 +146,8 @@ function revealShapeFive(){
                 drop: function( event, ui ) {
                     accept: "#draggable-five",
                     $star_five.setAttribute("class", "star-five");
-                    TweenMax.to(".star-five", 0.5, {scale:1});
+                    TweenMax.fromTo(".star-five", 0.5, {scale:3}, {scale:1});
+                    TweenMax.to(".five-pos", 1, {top: 100, left:-224});
                     TweenMax.from(".drag-five", 0.5, {scale:0});
                     $drop_five.setAttribute("class", "invisible");
                     $drag_one.setAttribute("class", "invisible");
@@ -142,6 +155,7 @@ function revealShapeFive(){
                     $drag_three.setAttribute("class", "invisible");
                     $drag_four.setAttribute("class", "invisible");
                     $drag_five.setAttribute("class", "invisible");
+                    $('#purple-char').sprite({fps: 5, no_of_frames: 5, play_frames: 11});
                     window.setTimeout( youWinLevelTwo, 1000 );
             }
         });

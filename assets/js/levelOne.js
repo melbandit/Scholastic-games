@@ -1,4 +1,7 @@
-$('#bird').sprite({fps: 12, no_of_frames: 3});
+//$('#bird').sprite({fps: 12, no_of_frames: 3});
+$('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
+$('#purple-char-2').sprite({fps: 2, no_of_frames: 5});
+$('#neba-char-2').sprite({fps: 2, no_of_frames: 5});
 
 var youWinVal;
 var $star_one = document.querySelector(".star-one");
@@ -56,12 +59,12 @@ function audioOnePlay(){
     console.log("audio played");
     $item_one.addEventListener("click", function(){
         $star_one.setAttribute("class", "star-one");
-        TweenMax.to(".star-one", 1, {scale:1});
-        TweenMax.from("#item-one", 1, {scale:0});
+        TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
     });
     $item_one.addEventListener("mouseup", function(){
         $audio_arms.pause();
         $audio_nose.play();
+        //TweenMax.fromTo("#item-one", 1, {scale:3}{scale:0});
         $item_one.setAttribute("class", "invisible");
         audioTwoPlay();
         $(".arms").addClass("opacity");
@@ -79,31 +82,17 @@ function audioOnePlay(){
     //     $audio_nah.play();
     // });
 }
-    // $thing.setAttribute("class", "thing active");
-// function youWinVal(){
-//     console.log("working");
-//     if(youWinVal === 1){
-//         console.log("youWinVal worked");
-//         $link_two.setAttribute("class", "link-two");
-//     }
-// }
-// function youWin(){
-//     console.log("You Win!!");
-//     youWinVal++;
-//     $youWin_bkg.setAttribute("class", "you-win-bkg");
-//     console.log(youWinVal);
-//     youWinVal();
-// }
 function audioTwoPlay(){
         console.log("audio Two played");
     $item_five.addEventListener("click", function(){
         $star_two.setAttribute("class", "star-two");
-        TweenMax.to(".star-two", 1, {scale:1});
-        TweenMax.from("#item-five", 1, {scale:0});
+        TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
+        //TweenMax.fromTo("#item-five", 1, {scale:3},{scale:0});
     });
     $item_five.addEventListener("mouseup", function(){
         $audio_nose.pause();
         $audio_mouth.play();
+        //TweenMax.fromTo("#item-five", 1, {scale:3},{scale:0});
         $item_five.setAttribute("class", "invisible");
         audioThreePlay();
         $(".nose").addClass("opacity");
@@ -113,8 +102,8 @@ function audioThreePlay(){
         console.log("audio Three played");
     $item_four.addEventListener("click", function(){
         $star_three.setAttribute("class", "star-three");
-        TweenMax.to(".star-three", 1, {scale:1});
-        TweenMax.from("#item-four", 1, {scale:0});
+        TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
+        TweenMax.fromTo("#item-four", 1, {scale:3},{scale:0});
     });
     $item_four.addEventListener("mouseup", function(){
         $audio_mouth.pause();
@@ -128,8 +117,8 @@ function audioFourPlay(){
         console.log("audio Four played");
     $item_six.addEventListener("click", function(){
         $star_four.setAttribute("class", "star-four");
-        TweenMax.to(".star-four", 1, {scale:1});
-        TweenMax.from("#item-six", 1, {scale:0});
+        TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
+        TweenMax.fromTo("#item-six", 1, {scale:3},{scale:0});
     });
     $item_six.addEventListener("mouseup", function(){
         $audio_eyes.pause();
@@ -143,8 +132,8 @@ function audioFivePlay(){
         console.log("audio Five played");
     $item_three.addEventListener("click", function(){
         $star_five.setAttribute("class", "star-five");
-        TweenMax.to(".star-five", 1, {scale:1});
-        TweenMax.from("#item-three", 1, {scale:0});
+        TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
+        TweenMax.fromTo("#item-three", 1, {scale:3},{scale:0});
     });
     $item_three.addEventListener("mouseup", function(){
         $audio_legs.pause();

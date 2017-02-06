@@ -23,6 +23,16 @@ video{
 		height: 120px;
 		background-size: 100%;
 	}
+	#arrow-direction--pos{
+		position: absolute; 
+		top: 100px;
+		left: -80px;
+		img{
+			width: 80px;
+			height: auto;
+			transform: rotateZ(-40deg);
+		}
+	}
 }
 
 #sortable li {
@@ -84,6 +94,11 @@ video{
     	z-index: 1;
     }
 }
+.bkg-stars{
+	position: absolute;
+	top: 80px;
+	left: 280px;
+}
 #parent-pwd{
 	position: absolute;
     top: 259px;
@@ -94,10 +109,16 @@ video{
     border-radius: 10px;
     background-color: #f6fbfd;
 }
+img.scholastic-logo{
+	position: absolute;
+	width: 230px;
+	left: 20px;
+	top: 660px;
+}
 .drop{
 	position: absolute;
 	top: 0;
-	left: 40px
+	left: 20px
 }
 .drag{
 	position: absolute;
@@ -171,7 +192,7 @@ video{
 	position: absolute;
     top: 516px;
     width: 300px;
-    left: 34px;
+    left: 20px;
     transform: rotateZ(15deg);
 }
 .gameOne-container{
@@ -179,33 +200,33 @@ video{
 	.character{
 		position: absolute;
 		width: 350px;
-    	top: 285px;
+    	top: 245px;
     	left: 330px;
 	}
 	.eyes{
-		z-index: 1;
     	width: 415px;
-	    top: 185px;
+	    top: 145px;
 	    left: 304px;
     	opacity: 0;
+ 
 	}
 	.nose{
-		z-index: 2;
 	    width: 30px;
-	    top: 368px;
+	    top: 328px;
 	    left: 480px;
 	    opacity: 0;
+	    z-index: 2;
 	}
 	.legs{
 		width: 250px;
+		top: 381px;
 		left: 380px;
-    	top: 421px;
 		opacity: 0;
 	}
 	.arms{
 		width: 467px;
+		top: 365px;
 	    left: 290px;
-	    top: 405px;
 	    opacity: 0;
 	}
 	.mouth{
@@ -252,3 +273,4 @@ video{
 		opacity:1;
 	}
 }
+

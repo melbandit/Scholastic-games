@@ -1,25 +1,29 @@
 // Start of Color animation
-$('#iggy-char').sprite({fps: 4, no_of_frames: 7});
 
-var left = getRandom(700, 710);
-var right = getRandom(820, 830);
-var delay = getRandom(1, 2.5);
+$('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
+$('#purple-char-2').sprite({fps: 2, no_of_frames: 5});
+$('#neba-char-2').sprite({fps: 2, no_of_frames: 5});
+
+
+var left = getRandom(690, 740);
+var right = getRandom(820, 860);
+var delay = getRandom(1, 3);
 //basic illustration of TweenMax's repeat, repeatDelay, yoyo and onRepeat
 //var color = document.querySelectorAll('.color');
 function getRandom(min, max) {
     return min + Math.random() * (max - min);
 }
-TweenMax.to(".color-one", 1, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
+TweenMax.to(".color-one", 0.5, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
 TweenMax.to(".color-two", 1.5, {left:left+"px", yoyo:true, delay: 2, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
 TweenMax.to(".color-three", 1, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
-TweenMax.to(".color-four", 1, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
-TweenMax.to(".color-five", 1.5, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
-TweenMax.to(".color-six", 1, {left:left+"px", yoyo:true, delay: 4, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
+TweenMax.to(".color-four", 1.25, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
+TweenMax.to(".color-five", 0.5, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
+TweenMax.to(".color-six", 0.75, {left:left+"px", yoyo:true, delay: 4, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
 TweenMax.to(".color-seven", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
 TweenMax.to(".color-eight", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
-TweenMax.to(".color-eight", 2, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
+TweenMax.to(".color-eight", 1.24, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
 TweenMax.to(".color-nine", 2, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
-TweenMax.to(".color-ten", 2, {left:right+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: delay, ease:Linear.easeNone});
+TweenMax.to(".color-ten", 1, {left:right+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: delay, ease:Linear.easeNone});
 // End of Color animation
 var youWinVal;
 var $star_one = document.querySelector(".star-one");
@@ -58,101 +62,101 @@ window.onload = function() {
     $( "#draggable-nine" ).draggable();
     $( "#draggable-ten" ).draggable();
     $audio_match.play();
-    revealShape();
-    revealShapeTwo();
-    revealShapeThree();
-    revealShapeFour();
-    revealShapeFive();
+    revealColor();
+    revealColorTwo();
+    revealColorThree();
+    revealColorFour();
+    revealColorFive();
 }
-// function youWinVal(){
-//     console.log("working");
-//     if(youWinVal === 1){
-//         console.log("youWinVal worked");
-//         $link_two.setAttribute("class", "link-two");
-//     }
-// }
-// function youWin(){
-//     console.log("You Win!!");
-//     youWinVal++;
-//     $(".you-win-bkg").removeClass("invisible");
-//     //console.log(youWinVal);
-//     //youWinVal();
-// }
 function youWinLevelThree(){
     console.log("You Win!!");
     localStorage.setItem("level3complete", 3);
     $youWin_bkg.setAttribute("class", "you-win-bkg");
 }
 
-function revealShape(){
+function revealColor(){
     $( function() {
         $( "#droppable-one" ).droppable({
             accept: "#draggable-one",
             drop: function( event, ui ) {
                 accept: ".drag-one",
                 $star_one.setAttribute("class", "star-one");
-                TweenMax.to(".star-one", 1, {scale:1});
+                TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
+                TweenMax.to(".color-one", 1, {left:860, top:60});
                 TweenMax.from(".drag-one", 1, {scale:0});
                 $drop_one.setAttribute("class", "invisible");
                 $drop_two.setAttribute("class", "drop-two");
+                $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+
             }
         });
     });
 }
-function revealShapeTwo(){
+function revealColorTwo(){
     $( function() {
         $( "#droppable-two" ).droppable({
             accept: "#draggable-two",
             drop: function( event, ui ) {
                 accept: ".drag-two",
                 $star_two.setAttribute("class", "star-two");
-                TweenMax.to(".star-two", 1, {scale:1});
+                TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
+                TweenMax.to(".color-two", 1, {left:860, top:200});
                 TweenMax.from(".drag-two", 1, {scale:0});
                 $drop_two.setAttribute("class", "invisible");
                 $drop_three.setAttribute("class", "drop-two");
+                $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+
             }
         });
     });
 }
-function revealShapeThree(){
+function revealColorThree(){
     $( function() {
             $( "#droppable-three" ).droppable({
                 accept: "#draggable-three",
                 drop: function( event, ui ) {
                     accept: "#draggable-three",
                     $star_three.setAttribute("class", "star-three");
-                    TweenMax.to(".star-three", 1, {scale:1});
+                    TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
+                    TweenMax.to(".color-three", 1, {left:860, top:360});
                     TweenMax.from(".drag-three", 1, {scale:0});
                     $drop_three.setAttribute("class", "invisible");
                     $drop_four.setAttribute("class", "drop-three");
+                    $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+
             }
         });
     });
 }
-function revealShapeFour(){
+function revealColorFour(){
     $( function() {
             $( "#droppable-four" ).droppable({
                 accept: "#draggable-four",
                 drop: function( event, ui ) {
                     accept: "#draggable-four",
                     $star_four.setAttribute("class", "star-four");
-                    TweenMax.to(".star-four", 1, {scale:1});
+                    TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
+                    TweenMax.to(".color-four", 1, {left:860, top:500});
                     TweenMax.from(".drag-four", 1, {scale:0});
                     $drop_four.setAttribute("class", "invisible");
                     $drop_five.setAttribute("class", "drop-four");
+                    $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+
             }
         });
     });
 }
-function revealShapeFive(){
+function revealColorFive(){
     $( function() {
             $( "#droppable-five" ).droppable({
                 accept: "#draggable-five",
                 drop: function( event, ui ) {
                     accept: "#draggable-five",
                     $star_five.setAttribute("class", "star-five");
-                    TweenMax.to(".star-five", 0.5, {scale:1});
+                    TweenMax.fromTo(".star-five", 0.5, {scale:3}, {scale:1});
+                    TweenMax.to(".color-five", 1, {left:860, top:620});
                     TweenMax.from(".drag-five", 0.5, {scale:0});
+                    $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
                     window.setTimeout( youWinLevelThree, 1000 );
                     console.log("did it!");
             }

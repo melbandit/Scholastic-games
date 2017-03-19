@@ -97,21 +97,21 @@
   animation-iteration-count: infinite;
 
 }
-#item-one, #item-three, #item-four, #item-five, #item-six{
-  animation-name: rotate-round;
+#lv1_item-one, #lv1_item-three, #lv1_item-four, #lv1_item-five, #lv1_item-six{
+  animation-name: rotate;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
-#item-three{
+#lv1_item-three{
   animation-delay: 0.5s;
 }
-#item-four{
+#lv1_item-four{
   animation-delay: 1s;
 }
-#item-five{
+#lv1_item-five{
   animation-delay: 1.5s;
 }
-#item-six{
+#lv1_item-six{
   animation-delay: 0.25s;
 }
 // .color{

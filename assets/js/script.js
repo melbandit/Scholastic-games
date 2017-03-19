@@ -16,17 +16,17 @@ function youWinValCheck(){
         console.log("LevelOneComplete!!!");
         $link_two.setAttribute("class", "link-two");
         $audio_home.pause();
-    } else{
-        $audio_home.play();
-    }
-    if (localStorage.getItem("level2complete")) {
+    // } else{
+    //     $audio_home.play();
+    // }
+    // if (localStorage.getItem("level2complete")) {
         console.log("LevelTwoComplete!!!");
         $link_three.setAttribute("class", "link-three");
-        $audio_home.pause();
-    }
-    if (localStorage.getItem("level3complete")) {
-        console.log("LevelThreeComplete!!!");
+    //     $audio_home.pause();
+    // }
+    // if (localStorage.getItem("level3complete")) {
+    //     console.log("LevelThreeComplete!!!");
         $link_four.setAttribute("class", "link-four");
-        $audio_home.pause();
+    //     $audio_home.pause();
     }
 }

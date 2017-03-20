@@ -31,8 +31,8 @@ var $link_two = document.querySelector("link-two");
 var $activate_level_two = document.querySelector("activateLevelTwo");
 window.onload = function() {
     console.log(youWinVal);
-    // $(".fade").css("display", "none");
-    // $(".fade").fadeIn(2000);
+    $(".fade").css("display", "none");
+    $(".fade").fadeIn(2000);
     // TweenMax.to(".back--button", 1, {scaleX:5, scaleY:5});
     // TweenMax.to("#lv1_item-one", 0.5, {top: 50});
     // TweenMax.to("#lv1_item-two", 0.75, {left: 550, delay: 0.25});
@@ -141,6 +141,6 @@ function audioFivePlay(){
         $lv1_item_three.setAttribute("class", "invisible");
         $(".legs").addClass("opacity");
         //TweenMax.fromTo(".legs", 1, {css:{rotation: 10}}, {css:{rotation: -10}} );
-        //window.setTimeout( youWinLevelOne, 2000 );
+        window.setTimeout( youWinLevelOne, 2000 );
     });
 }

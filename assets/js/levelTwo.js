@@ -28,8 +28,8 @@ var $drag_three = document.querySelector(".drag-three");
 var $drag_four = document.querySelector(".drag-four");
 var $drag_five = document.querySelector(".drag-five");
 window.onload = function() {
-    // $(".fade").css("display", "none");
-    // $(".fade").fadeIn(2000);
+    $(".fade").css("display", "none");
+    $(".fade").fadeIn(2000);
     // TweenMax.to(".back--button", 1, {scaleX:5, scaleY:5});
     // TweenMax.to("#item-one", 0.5, {top: 50});
     // TweenMax.to("#item-two", 0.75, {left: 550, delay: 0.25});

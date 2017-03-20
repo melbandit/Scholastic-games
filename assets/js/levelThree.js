@@ -1,5 +1,3 @@
-// Start of Color animation
-
 $('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
 $('#purple-char-2').sprite({fps: 2, no_of_frames: 5});
 $('#neba-char-2').sprite({fps: 2, no_of_frames: 5});
@@ -51,6 +49,8 @@ var $drop_eight = document.querySelector(".drop-three");
 var $drop_nine = document.querySelector(".drop-four");
 var $drop_ten = document.querySelector(".drop-five");
 window.onload = function() {
+    $(".fade").css("display", "none");
+    $(".fade").fadeIn(2000);
     $( "#draggable-one" ).draggable();
     $( "#draggable-two" ).draggable();
     $( "#draggable-three" ).draggable();
@@ -73,7 +73,11 @@ function youWinLevelThree(){
     localStorage.setItem("level3complete", 3);
     $youWin_bkg.setAttribute("class", "you-win-bkg");
 }
-
+// if(localStorage.getItem("lvThreeStar1")){
+//         TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
+//         $num_three.setAttribute("class", "invisible");
+//         $num_five.setAttribute("class", "number-five");
+//     }else{
 function revealColor(){
     $( function() {
         $( "#droppable-one" ).droppable({

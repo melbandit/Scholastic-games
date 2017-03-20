@@ -21,12 +21,16 @@ var $num_five = document.querySelector(".number-five");
 var $youWin_bkg = document.querySelector(".you-win-bkg");
 var $audio_whoops = document.getElementById("audio--whoops");
 var $audio_nah = document.getElementById("audio--nah");
-
-// monsterDance();
-numOne();
-// numThree();
-// numFour();
-// numFive();
+window.onload = function() {
+    $(".fade").css("display", "none");
+    $(".fade").fadeIn(2000);
+	// monsterDance();
+	numOne();
+	numTwo();
+	numThree();
+	numFour();
+	numFive();
+}
 
 function monsterDance(){
 	$('#iggy-char-lv4').sprite({fps: 4, no_of_frames: 7, play_frames: 14});
@@ -71,7 +75,7 @@ function numTwo(){
 				localStorage.setItem("lvFourStar2", 2);
 				monsterDance();
 			} else{
-				$audio_nah.play();
+				//$audio_nah.play();
 			}
 		});
 		numThree();
@@ -91,7 +95,7 @@ function numThree(){
 				localStorage.setItem("lvFourStar3", 3);
 				monsterDance();
 			} else{
-				$audio_whoops.play();
+				//$audio_whoops.play();
 			}
 		});
 		numFour();
@@ -111,7 +115,7 @@ function numFour(){
 				localStorage.setItem("lvFourStar4", 4);
 				monsterDance();
 			} else{
-				$audio_nah.play();
+				//$audio_nah.play();
 			}
 		});
 		numFive();
@@ -131,7 +135,7 @@ function numFive(){
 				monsterDance();
 				window.setTimeout( youWin, 1000 );
 			} else{
-				$audio_whoops.play();
+				//$audio_whoops.play();
 			}
 		});
 		//localStorage.clear();

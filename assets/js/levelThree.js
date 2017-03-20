@@ -49,8 +49,8 @@ var $drop_eight = document.querySelector(".drop-three");
 var $drop_nine = document.querySelector(".drop-four");
 var $drop_ten = document.querySelector(".drop-five");
 window.onload = function() {
-    $(".fade").css("display", "none");
-    $(".fade").fadeIn(2000);
+    // $(".fade").css("display", "none");
+    // $(".fade").fadeIn(2000);
     $( "#draggable-one" ).draggable();
     $( "#draggable-two" ).draggable();
     $( "#draggable-three" ).draggable();
@@ -79,22 +79,28 @@ function youWinLevelThree(){
 //         $num_five.setAttribute("class", "number-five");
 //     }else{
 function revealColor(){
-    $( function() {
-        $( "#droppable-one" ).droppable({
-            accept: "#draggable-one",
-            drop: function( event, ui ) {
-                accept: ".drag-one",
-                $star_one.setAttribute("class", "star-one");
-                TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
-                TweenMax.to(".color-one", 1, {left:860, top:60});
-                TweenMax.from(".drag-one", 1, {scale:0});
-                $drop_one.setAttribute("class", "invisible");
-                $drop_two.setAttribute("class", "drop-two");
-                $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
-
-            }
+    if(localStorage.getItem("lvThreeStar1")){
+        TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
+        $drop_one.setAttribute("class", "invisible");
+        $drop_two.setAttribute("class", "drop-two");
+    }else{
+        $( function() {
+            $( "#droppable-one" ).droppable({
+                accept: "#draggable-one",
+                drop: function( event, ui ) {
+                    accept: ".drag-one",
+                    $star_one.setAttribute("class", "star-one");
+                    TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
+                    TweenMax.to(".color-one", 1, {left:860, top:60});
+                    TweenMax.from(".drag-one", 1, {scale:0});
+                    $drop_one.setAttribute("class", "invisible");
+                    $drop_two.setAttribute("class", "drop-two");
+                    $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+                    localStorage.setItem("lvThreeStar1", 1);
+                }
+            });
         });
-    });
+    }
 }
 function revealColorTwo(){
     $( function() {

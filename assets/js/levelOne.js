@@ -30,16 +30,8 @@ var $link_two = document.querySelector("link-two");
 
 var $activate_level_two = document.querySelector("activateLevelTwo");
 window.onload = function() {
-    console.log(youWinVal);
-    $(".fade").css("display", "none");
-    $(".fade").fadeIn(2000);
-    // TweenMax.to(".back--button", 1, {scaleX:5, scaleY:5});
-    // TweenMax.to("#lv1_item-one", 0.5, {top: 50});
-    // TweenMax.to("#lv1_item-two", 0.75, {left: 550, delay: 0.25});
-    // TweenMax.from("#lv1_item-three", 1, {top: 250, alpha: 0, delay: 0.5});
-    // TweenMax.from("#lv1_item-four", 1, {top: 330, alpha: 0, delay: 1});
-    // TweenMax.from("#lv1_item-six", 1, {alpha: 0, delay: 2});
-    //document.body.className = "animate";
+    // $(".fade").css("display", "none");
+    // $(".fade").fadeIn(2000);
     $audio_arms.play();
     audioOnePlay();
 }
@@ -49,7 +41,6 @@ window.onload = function() {
 //correct lv1_item choosen spins and zooms off the screen
     //add star to first position.
     //start next audio, call function.
-
 function youWinLevelOne(){
     console.log("You Win Lovel One!!");
     localStorage.setItem("level1complete", 1);

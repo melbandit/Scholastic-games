@@ -22,8 +22,8 @@ var $youWin_bkg = document.querySelector(".you-win-bkg");
 var $audio_whoops = document.getElementById("audio--whoops");
 var $audio_nah = document.getElementById("audio--nah");
 window.onload = function() {
-    $(".fade").css("display", "none");
-    $(".fade").fadeIn(2000);
+    // $(".fade").css("display", "none");
+    // $(".fade").fadeIn(2000);
 	// monsterDance();
 	numOne();
 	numTwo();

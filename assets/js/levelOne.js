@@ -96,6 +96,7 @@ function audioTwoPlay(){
         $lv1_item_five.setAttribute("class", "invisible");
         audioThreePlay();
         $(".nose").addClass("opacity");
+        TweenMax.fromTo(".nose", 1, {css:{rotation: -90}}, {css:{rotation: 0}} );
     });
 }
 function audioThreePlay(){
@@ -139,6 +140,7 @@ function audioFivePlay(){
         $audio_legs.pause();
         $lv1_item_three.setAttribute("class", "invisible");
         $(".legs").addClass("opacity");
-        window.setTimeout( youWinLevelOne, 2000 );
+        //TweenMax.fromTo(".legs", 1, {css:{rotation: 10}}, {css:{rotation: -10}} );
+        //window.setTimeout( youWinLevelOne, 2000 );
     });
 }

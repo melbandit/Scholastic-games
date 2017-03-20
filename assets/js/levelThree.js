@@ -73,13 +73,9 @@ function youWinLevelThree(){
     localStorage.setItem("level3complete", 3);
     $youWin_bkg.setAttribute("class", "you-win-bkg");
 }
-// if(localStorage.getItem("lvThreeStar1")){
-//         TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
-//         $num_three.setAttribute("class", "invisible");
-//         $num_five.setAttribute("class", "number-five");
-//     }else{
 function revealColor(){
     if(localStorage.getItem("lvThreeStar1")){
+        $star_one.setAttribute("class", "star-one");
         TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
         $drop_one.setAttribute("class", "invisible");
         $drop_two.setAttribute("class", "drop-two");
@@ -103,73 +99,101 @@ function revealColor(){
     }
 }
 function revealColorTwo(){
-    $( function() {
-        $( "#droppable-two" ).droppable({
-            accept: "#draggable-two",
-            drop: function( event, ui ) {
-                accept: ".drag-two",
-                $star_two.setAttribute("class", "star-two");
-                TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
-                TweenMax.to(".color-two", 1, {left:860, top:200});
-                TweenMax.from(".drag-two", 1, {scale:0});
-                $drop_two.setAttribute("class", "invisible");
-                $drop_three.setAttribute("class", "drop-two");
-                $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
-
-            }
+    if(localStorage.getItem("lvThreeStar2")){
+        $star_two.setAttribute("class", "star-two");
+        TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
+        $drop_two.setAttribute("class", "invisible");
+        $drop_three.setAttribute("class", "drop-two");
+    }else{
+        $( function() {
+            $( "#droppable-two" ).droppable({
+                accept: "#draggable-two",
+                drop: function( event, ui ) {
+                    accept: ".drag-two",
+                    $star_two.setAttribute("class", "star-two");
+                    TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
+                    TweenMax.to(".color-two", 1, {left:860, top:200});
+                    TweenMax.from(".drag-two", 1, {scale:0});
+                    $drop_two.setAttribute("class", "invisible");
+                    $drop_three.setAttribute("class", "drop-two");
+                    $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+                    localStorage.setItem("lvThreeStar2", 2);
+                }
+            });
         });
-    });
+    }
 }
 function revealColorThree(){
-    $( function() {
-            $( "#droppable-three" ).droppable({
-                accept: "#draggable-three",
-                drop: function( event, ui ) {
+    if(localStorage.getItem("lvThreeStar3")){
+        $star_three.setAttribute("class", "star-three");
+        TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
+        $drop_three.setAttribute("class", "invisible");
+        $drop_four.setAttribute("class", "drop-three");
+    }else{
+        $( function() {
+                $( "#droppable-three" ).droppable({
                     accept: "#draggable-three",
-                    $star_three.setAttribute("class", "star-three");
-                    TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
-                    TweenMax.to(".color-three", 1, {left:860, top:360});
-                    TweenMax.from(".drag-three", 1, {scale:0});
-                    $drop_three.setAttribute("class", "invisible");
-                    $drop_four.setAttribute("class", "drop-three");
-                    $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
-
-            }
+                    drop: function( event, ui ) {
+                        accept: "#draggable-three",
+                        $star_three.setAttribute("class", "star-three");
+                        TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
+                        TweenMax.to(".color-three", 1, {left:860, top:360});
+                        TweenMax.from(".drag-three", 1, {scale:0});
+                        $drop_three.setAttribute("class", "invisible");
+                        $drop_four.setAttribute("class", "drop-three");
+                        $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+                        localStorage.setItem("lvThreeStar3", 3);
+                }
+            });
         });
-    });
+    }
 }
 function revealColorFour(){
-    $( function() {
-            $( "#droppable-four" ).droppable({
-                accept: "#draggable-four",
-                drop: function( event, ui ) {
+    if(localStorage.getItem("lvThreeStar4")){
+        $star_four.setAttribute("class", "star-four");
+        TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
+        $drop_four.setAttribute("class", "invisible");
+        $drop_five.setAttribute("class", "drop-four");
+    }else{
+        $( function() {
+                $( "#droppable-four" ).droppable({
                     accept: "#draggable-four",
-                    $star_four.setAttribute("class", "star-four");
-                    TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
-                    TweenMax.to(".color-four", 1, {left:860, top:500});
-                    TweenMax.from(".drag-four", 1, {scale:0});
-                    $drop_four.setAttribute("class", "invisible");
-                    $drop_five.setAttribute("class", "drop-four");
-                    $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
-
-            }
+                    drop: function( event, ui ) {
+                        accept: "#draggable-four",
+                        $star_four.setAttribute("class", "star-four");
+                        TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
+                        TweenMax.to(".color-four", 1, {left:860, top:500});
+                        TweenMax.from(".drag-four", 1, {scale:0});
+                        $drop_four.setAttribute("class", "invisible");
+                        $drop_five.setAttribute("class", "drop-four");
+                        $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+                        localStorage.setItem("lvThreeStar4", 4);
+                }
+            });
         });
-    });
+    }
 }
 function revealColorFive(){
-    $( function() {
-            $( "#droppable-five" ).droppable({
-                accept: "#draggable-five",
-                drop: function( event, ui ) {
+    if(localStorage.getItem("lvThreeStar5")){
+        $star_five.setAttribute("class", "star-five");
+        TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
+        $drop_five.setAttribute("class", "invisible");
+    }else{
+        $( function() {
+                $( "#droppable-five" ).droppable({
                     accept: "#draggable-five",
-                    $star_five.setAttribute("class", "star-five");
-                    TweenMax.fromTo(".star-five", 0.5, {scale:3}, {scale:1});
-                    TweenMax.to(".color-five", 1, {left:860, top:620});
-                    TweenMax.from(".drag-five", 0.5, {scale:0});
-                    $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
-                    window.setTimeout( youWinLevelThree, 1000 );
-                    console.log("did it!");
-            }
+                    drop: function( event, ui ) {
+                        accept: "#draggable-five",
+                        $star_five.setAttribute("class", "star-five");
+                        TweenMax.fromTo(".star-five", 0.5, {scale:3}, {scale:1});
+                        TweenMax.to(".color-five", 1, {left:860, top:620});
+                        TweenMax.from(".drag-five", 0.5, {scale:0});
+                        $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
+                        localStorage.setItem("lvThreeStar5", 5);
+                        window.setTimeout( youWinLevelThree, 1000 );
+                        console.log("did it!");
+                }
+            });
         });
-    });
+    }
 }

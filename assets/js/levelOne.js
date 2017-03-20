@@ -32,8 +32,23 @@ var $activate_level_two = document.querySelector("activateLevelTwo");
 window.onload = function() {
     // $(".fade").css("display", "none");
     // $(".fade").fadeIn(2000);
-    $audio_arms.play();
+    $( "#lv1_item-one" ).draggable();
+    $( "#lv1_item-six" ).draggable();
+    $( "#lv1_item-three" ).draggable();
+    $( "#lv1_item-four" ).draggable();
+    $( "#lv1_item-five" ).draggable();
     audioOnePlay();
+    // if(localStorage.getItem("lvOneStar1")){
+    //     audioTwoPlay();
+    // } else if (localStorage.getItem("lvOneStar2")){
+    //     audioThreePlay();
+    // } else if (localStorage.getItem("lvOneStar3")) {
+    //     audioFourPlay();
+    // } else if (localStorage.getItem("lvOneStar4")) {
+    //     audioFivePlay();
+    // } else {
+
+    // }
 }
 //function
 //first play audio 
@@ -47,19 +62,29 @@ function youWinLevelOne(){
     $youWin_bkg.setAttribute("class", "you-win-bkg");
 }
 function audioOnePlay(){
-    console.log("audio played");
-    $lv1_item_one.addEventListener("click", function(){
-        $star_one.setAttribute("class", "star-one");
-        TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
-    });
-    $lv1_item_one.addEventListener("mouseup", function(){
+    if(localStorage.getItem("lvOneStar1")){
         $audio_arms.pause();
         $audio_nose.play();
-        //TweenMax.fromTo("#lv1_item-one", 1, {scale:3}{scale:0});
-        $lv1_item_one.setAttribute("class", "invisible");
-        audioTwoPlay();
         $(".arms").addClass("opacity");
-    });
+        TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
+        $star_one.setAttribute("class", "star-one");
+        audioTwoPlay();
+    }else{
+        $audio_arms.play();
+        $lv1_item_one.addEventListener("click", function(){
+            $star_one.setAttribute("class", "star-one");
+            TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
+        });
+        $lv1_item_one.addEventListener("mouseup", function(){
+            $audio_arms.pause();
+            $audio_nose.play();
+            //TweenMax.fromTo("#lv1_item-one", 1, {scale:3}{scale:0});
+            $lv1_item_one.setAttribute("class", "invisible");
+            audioTwoPlay();
+            $(".arms").addClass("opacity");
+            localStorage.setItem("lvOneStar1", 1);
+        });
+    }
     // $lv1_item_two.addEventListener("click", function(){
     //     $audio_whoops.play();
     // });
@@ -74,64 +99,96 @@ function audioOnePlay(){
     // });
 }
 function audioTwoPlay(){
-        console.log("audio Two played");
-    $lv1_item_five.addEventListener("click", function(){
-        $star_two.setAttribute("class", "star-two");
-        TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
-        //TweenMax.fromTo("#lv1_item-five", 1, {scale:3},{scale:0});
-    });
-    $lv1_item_five.addEventListener("mouseup", function(){
+    if(localStorage.getItem("lvOneStar2")){
         $audio_nose.pause();
         $audio_mouth.play();
-        //TweenMax.fromTo("#lv1_item-five", 1, {scale:3},{scale:0});
-        $lv1_item_five.setAttribute("class", "invisible");
-        audioThreePlay();
         $(".nose").addClass("opacity");
         TweenMax.fromTo(".nose", 1, {css:{rotation: -90}}, {css:{rotation: 0}} );
-    });
+        $star_two.setAttribute("class", "star-two");
+        TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
+        audioThreePlay();
+    }else{
+        $lv1_item_five.addEventListener("click", function(){
+            $star_two.setAttribute("class", "star-two");
+            TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
+        });
+        $lv1_item_five.addEventListener("mouseup", function(){
+            $audio_nose.pause();
+            $audio_mouth.play();
+            $lv1_item_five.setAttribute("class", "invisible");
+            audioThreePlay();
+            $(".nose").addClass("opacity");
+            TweenMax.fromTo(".nose", 1, {css:{rotation: -90}}, {css:{rotation: 0}} );
+            localStorage.setItem("lvOneStar2", 2);
+        });
+    }
 }
 function audioThreePlay(){
-        console.log("audio Three played");
-    $lv1_item_four.addEventListener("click", function(){
-        $star_three.setAttribute("class", "star-three");
-        TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
-        TweenMax.fromTo("#lv1_item-four", 1, {scale:3},{scale:0});
-    });
-    $lv1_item_four.addEventListener("mouseup", function(){
+    if(localStorage.getItem("lvOneStar3")){
         $audio_mouth.pause();
         $audio_eyes.play();
-        $lv1_item_four.setAttribute("class", "invisible");
+        TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
+        $star_three.setAttribute("class", "star-three");
         audioFourPlay();
         $(".mouth").addClass("opacity");
-    });
+    }else{
+        $lv1_item_four.addEventListener("click", function(){
+            $star_three.setAttribute("class", "star-three");
+            TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
+            TweenMax.fromTo("#lv1_item-four", 1, {scale:3},{scale:0});
+        });
+        $lv1_item_four.addEventListener("mouseup", function(){
+            $audio_mouth.pause();
+            $audio_eyes.play();
+            $lv1_item_four.setAttribute("class", "invisible");
+            audioFourPlay();
+            $(".mouth").addClass("opacity");
+            localStorage.setItem("lvOneStar3", 3);
+        });
+    }
 }
 function audioFourPlay(){
-        console.log("audio Four played");
-    $lv1_item_six.addEventListener("click", function(){
-        $star_four.setAttribute("class", "star-four");
-        TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
-        TweenMax.fromTo("#lv1_item-six", 1, {scale:3},{scale:0});
-    });
-    $lv1_item_six.addEventListener("mouseup", function(){
+    if(localStorage.getItem("lvOneStar4")){
         $audio_eyes.pause();
         $audio_legs.play();
-        $lv1_item_six.setAttribute("class", "invisible");
+        TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
+        $star_four.setAttribute("class", "star-four");
         audioFivePlay();
         $(".eyes").addClass("opacity");
-    });
+    }else{
+        $lv1_item_six.addEventListener("click", function(){
+            $star_four.setAttribute("class", "star-four");
+            TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
+            TweenMax.fromTo("#lv1_item-six", 1, {scale:3},{scale:0});
+        });
+        $lv1_item_six.addEventListener("mouseup", function(){
+            $audio_eyes.pause();
+            $audio_legs.play();
+            $lv1_item_six.setAttribute("class", "invisible");
+            audioFivePlay();
+            $(".eyes").addClass("opacity");
+            localStorage.setItem("lvOneStar4", 4);
+        });
+    }
 }
 function audioFivePlay(){
-        console.log("audio Five played");
-    $lv1_item_three.addEventListener("click", function(){
-        $star_five.setAttribute("class", "star-five");
-        TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
-        TweenMax.fromTo("#lv1_item-three", 1, {scale:3},{scale:0});
-    });
-    $lv1_item_three.addEventListener("mouseup", function(){
+    if(localStorage.getItem("lvOneStar5")){
         $audio_legs.pause();
-        $lv1_item_three.setAttribute("class", "invisible");
         $(".legs").addClass("opacity");
-        //TweenMax.fromTo(".legs", 1, {css:{rotation: 10}}, {css:{rotation: -10}} );
-        window.setTimeout( youWinLevelOne, 2000 );
-    });
+        TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
+        $star_five.setAttribute("class", "star-five");
+    }else{
+        $lv1_item_three.addEventListener("click", function(){
+            $star_five.setAttribute("class", "star-five");
+            TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
+            TweenMax.fromTo("#lv1_item-three", 1, {scale:3},{scale:0});
+        });
+        $lv1_item_three.addEventListener("mouseup", function(){
+            $audio_legs.pause();
+            $lv1_item_three.setAttribute("class", "invisible");
+            $(".legs").addClass("opacity");
+            localStorage.setItem("lvOneStar5", 5);
+            window.setTimeout( youWinLevelOne, 2000 );
+        });
+    }
 }

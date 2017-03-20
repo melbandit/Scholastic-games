@@ -1,6 +1,6 @@
-	$('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
-	$('#purple-char-2').sprite({fps: 4, no_of_frames: 5});
-	$('#neba-char-2').sprite({fps: 4, no_of_frames: 5});
+$('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
+$('#purple-char-2').sprite({fps: 4, no_of_frames: 5});
+$('#neba-char-2').sprite({fps: 4, no_of_frames: 5});
 $( function() {
 	$( "#sortable" ).sortable();
 	$( "#sortable" ).disableSelection();

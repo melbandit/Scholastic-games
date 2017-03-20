@@ -42,6 +42,7 @@ function youWin(){
 }
 function numOne(){
 	if(localStorage.getItem("lvFourStar1")){
+		$star_one.setAttribute("class", "star-one");
 		TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
 		$num_three.setAttribute("class", "invisible");
 		$num_five.setAttribute("class", "number-five");
@@ -54,14 +55,16 @@ function numOne(){
 				localStorage.setItem("lvFourStar1", 1);
 				numTwo();
 				monsterDance();
-			} else{
-				$audio_whoops.play();
-			}
+			 } 
+			 //else{
+			// 	$audio_whoops.play();
+			// }
 		});
 	}
 }
 function numTwo(){
 	if(localStorage.getItem("lvFourStar2")){
+		$star_two.setAttribute("class", "star-two");
 		TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
 		$num_five.setAttribute("class", "invisible");
 		$num_two.setAttribute("class", "number-two");
@@ -74,15 +77,15 @@ function numTwo(){
 				$num_two.setAttribute("class", "number-two");
 				localStorage.setItem("lvFourStar2", 2);
 				monsterDance();
-			} else{
-				//$audio_nah.play();
+				numThree();
 			}
 		});
-		numThree();
+		
 	}
 }
 function numThree(){
 	if(localStorage.getItem("lvFourStar3")){ //return;
+		$star_three.setAttribute("class", "star-three");
 		TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
 		$num_two.setAttribute("class", "invisible");
 		$num_one.setAttribute("class", "number-one");
@@ -94,15 +97,18 @@ function numThree(){
 				$num_one.setAttribute("class", "number-one");
 				localStorage.setItem("lvFourStar3", 3);
 				monsterDance();
-			} else{
-				//$audio_whoops.play();
-			}
+				numFour();
+			} 
+			// else{
+			// 	//$audio_whoops.play();
+			// }
 		});
-		numFour();
+		
 	}
 }
 function numFour(){
 	if(localStorage.getItem("lvFourStar4")){
+		$star_four.setAttribute("class", "star-four");
 		TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
 		$num_one.setAttribute("class", "invisible");
 		$num_four.setAttribute("class", "number-four");
@@ -114,15 +120,18 @@ function numFour(){
 				$num_four.setAttribute("class", "number-four");
 				localStorage.setItem("lvFourStar4", 4);
 				monsterDance();
-			} else{
-				//$audio_nah.play();
-			}
+				numFive();
+			} 
+			// else{
+			// 	//$audio_nah.play();
+			// }
 		});
-		numFive();
+		
 	}
 }
 function numFive(){
 	if(localStorage.getItem("lvFourStar5")){
+		$star_five.setAttribute("class", "star-five");
 		TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
 		$num_four.setAttribute("class", "invisible");
 		// localStorage.clear();
@@ -134,9 +143,10 @@ function numFive(){
 				localStorage.setItem("lvFourStar5", 5);
 				monsterDance();
 				window.setTimeout( youWin, 1000 );
-			} else{
-				//$audio_whoops.play();
-			}
+			} 
+			// else{
+			// 	//$audio_whoops.play();
+			// }
 		});
 		//localStorage.clear();
 	}

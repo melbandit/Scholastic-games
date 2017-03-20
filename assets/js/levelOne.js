@@ -71,11 +71,13 @@ function audioOnePlay(){
         audioTwoPlay();
     }else{
         $audio_arms.play();
-        $lv1_item_one.addEventListener("click", function(){
+        // $lv1_item_one.addEventListener("click", function(){
+        //     $star_one.setAttribute("class", "star-one");
+        //     TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
+        // });
+        $lv1_item_one.addEventListener("mouseup", function(){
             $star_one.setAttribute("class", "star-one");
             TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
-        });
-        $lv1_item_one.addEventListener("mouseup", function(){
             $audio_arms.pause();
             $audio_nose.play();
             //TweenMax.fromTo("#lv1_item-one", 1, {scale:3}{scale:0});
@@ -132,16 +134,20 @@ function audioThreePlay(){
         audioFourPlay();
         $(".mouth").addClass("opacity");
     }else{
-        $lv1_item_four.addEventListener("click", function(){
+        // $lv1_item_four.addEventListener("click", function(){
+        //     $star_three.setAttribute("class", "star-three");
+        //     TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
+        //     TweenMax.fromTo("#lv1_item-four", 1, {scale:3},{scale:0});
+        // });
+        $lv1_item_four.addEventListener("mouseup", function(){
             $star_three.setAttribute("class", "star-three");
             TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
             TweenMax.fromTo("#lv1_item-four", 1, {scale:3},{scale:0});
-        });
-        $lv1_item_four.addEventListener("mouseup", function(){
             $audio_mouth.pause();
             $audio_eyes.play();
             $lv1_item_four.setAttribute("class", "invisible");
             audioFourPlay();
+            // $star_three.setAttribute("class", "star-three");
             $(".mouth").addClass("opacity");
             localStorage.setItem("lvOneStar3", 3);
         });
@@ -156,12 +162,15 @@ function audioFourPlay(){
         audioFivePlay();
         $(".eyes").addClass("opacity");
     }else{
-        $lv1_item_six.addEventListener("click", function(){
+        // $lv1_item_six.addEventListener("click", function(){
+        //     $star_four.setAttribute("class", "star-four");
+        //     TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
+        //     TweenMax.fromTo("#lv1_item-six", 1, {scale:3},{scale:0});
+        // });
+        $lv1_item_six.addEventListener("mouseup", function(){
             $star_four.setAttribute("class", "star-four");
             TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
             TweenMax.fromTo("#lv1_item-six", 1, {scale:3},{scale:0});
-        });
-        $lv1_item_six.addEventListener("mouseup", function(){
             $audio_eyes.pause();
             $audio_legs.play();
             $lv1_item_six.setAttribute("class", "invisible");
@@ -178,13 +187,17 @@ function audioFivePlay(){
         TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
         $star_five.setAttribute("class", "star-five");
     }else{
-        $lv1_item_three.addEventListener("click", function(){
+        // $lv1_item_three.addEventListener("click", function(){
+        //     $star_five.setAttribute("class", "star-five");
+        //     TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
+        //     TweenMax.fromTo("#lv1_item-three", 1, {scale:3},{scale:0});
+        // });
+        $lv1_item_three.addEventListener("mouseup", function(){
             $star_five.setAttribute("class", "star-five");
             TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
             TweenMax.fromTo("#lv1_item-three", 1, {scale:3},{scale:0});
-        });
-        $lv1_item_three.addEventListener("mouseup", function(){
             $audio_legs.pause();
+            $star_five.setAttribute("class", "star-five");
             $lv1_item_three.setAttribute("class", "invisible");
             $(".legs").addClass("opacity");
             localStorage.setItem("lvOneStar5", 5);

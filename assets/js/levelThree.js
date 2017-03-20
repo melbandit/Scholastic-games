@@ -61,7 +61,6 @@ window.onload = function() {
     $( "#draggable-eight" ).draggable();
     $( "#draggable-nine" ).draggable();
     $( "#draggable-ten" ).draggable();
-    $audio_match.play();
     revealColor();
     revealColorTwo();
     revealColorThree();
@@ -80,6 +79,7 @@ function revealColor(){
         $drop_one.setAttribute("class", "invisible");
         $drop_two.setAttribute("class", "drop-two");
     }else{
+        $audio_match.play();
         $( function() {
             $( "#droppable-one" ).droppable({
                 accept: "#draggable-one",

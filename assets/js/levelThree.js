@@ -2,8 +2,17 @@ $('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
 $('#purple-char-2').sprite({fps: 2, no_of_frames: 5});
 $('#neba-char-2').sprite({fps: 2, no_of_frames: 5});
 
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+}
 
-var left = getRandom(690, 740);
+var left = getRandom(-10, 10);
 var right = getRandom(820, 860);
 var delay = getRandom(1, 3);
 //basic illustration of TweenMax's repeat, repeatDelay, yoyo and onRepeat
@@ -11,17 +20,28 @@ var delay = getRandom(1, 3);
 function getRandom(min, max) {
     return min + Math.random() * (max - min);
 }
-TweenMax.to(".color-one", 0.5, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
-TweenMax.to(".color-two", 1.5, {left:left+"px", yoyo:true, delay: 2, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
-TweenMax.to(".color-three", 1, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
-TweenMax.to(".color-four", 1.25, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
-TweenMax.to(".color-five", 0.5, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
-TweenMax.to(".color-six", 0.75, {left:left+"px", yoyo:true, delay: 4, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
-TweenMax.to(".color-seven", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
-TweenMax.to(".color-eight", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
-TweenMax.to(".color-eight", 1.24, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
-TweenMax.to(".color-nine", 2, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
-TweenMax.to(".color-ten", 1, {left:right+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: delay, ease:Linear.easeNone});
+var colors = $(".color").get();
+shuffle(colors);
+
+TweenMax.staggerTo(colors, 2, {left:20, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(colors);
+TweenMax.staggerTo(colors, 5, {rotation:20, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(colors);
+TweenMax.staggerTo(colors, 3, {top:10, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+
+
+TweenMax.to(".thought-bubble", 2, {transformOrigin:"0% 100%", scaleY: 1.05, rotation: 3, yoyo: true, repeat: -1, ease:Power2.easeInOut})
+
+// TweenMax.to(".color-two", 1.5, {left:left+"px", yoyo:true, delay: 2, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
+// TweenMax.to(".color-three", 1, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
+// TweenMax.to(".color-four", 1.25, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
+// TweenMax.to(".color-five", 0.5, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
+// TweenMax.to(".color-six", 0.75, {left:left+"px", yoyo:true, delay: 4, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
+// TweenMax.to(".color-seven", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
+// // TweenMax.to(".color-eight", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
+// TweenMax.to(".color-eight", 1.24, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
+// TweenMax.to(".color-nine", 2, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
+// TweenMax.to(".color-ten", 1, {left:right+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: delay, ease:Linear.easeNone});
 // End of Color animation
 var youWinVal;
 var $star_one = document.querySelector(".star-one");

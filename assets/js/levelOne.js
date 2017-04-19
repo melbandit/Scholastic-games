@@ -110,11 +110,12 @@ function audioTwoPlay(){
         TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
         audioThreePlay();
     }else{
-        $lv1_item_five.addEventListener("click", function(){
+        // $lv1_item_five.addEventListener("click", function(){
+            
+        // });
+        $lv1_item_five.addEventListener("mouseup", function(){
             $star_two.setAttribute("class", "star-two");
             TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
-        });
-        $lv1_item_five.addEventListener("mouseup", function(){
             $audio_nose.pause();
             $audio_mouth.play();
             $lv1_item_five.setAttribute("class", "invisible");

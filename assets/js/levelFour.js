@@ -26,10 +26,10 @@ window.onload = function() {
     // $(".fade").fadeIn(2000);
 	// monsterDance();
 	numOne();
-	numTwo();
-	numThree();
-	numFour();
-	numFive();
+	// numTwo();
+	// numThree();
+	// numFour();
+	// numFive();
 }
 
 function monsterDance(){
@@ -46,6 +46,7 @@ function numOne(){
 		TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
 		$num_three.setAttribute("class", "invisible");
 		$num_five.setAttribute("class", "number-five");
+		numTwo();
 	}else{
 		$("ul.choices--numbers li").mouseup(function(){
 			if ($( "ul.choices--numbers li" ).first().hasClass('three')){
@@ -68,6 +69,7 @@ function numTwo(){
 		TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
 		$num_five.setAttribute("class", "invisible");
 		$num_two.setAttribute("class", "number-two");
+		numThree();
 	} else{
 		$("ul.choices--numbers li").mouseup(function(){
 			if ($( "ul.choices--numbers li" ).first().hasClass('five')){
@@ -89,6 +91,7 @@ function numThree(){
 		TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
 		$num_two.setAttribute("class", "invisible");
 		$num_one.setAttribute("class", "number-one");
+		numFour();
 	}else{
 		$("ul.choices--numbers li").mouseup(function(){
 			if ($( "ul.choices--numbers li" ).first().hasClass('two')){
@@ -112,6 +115,7 @@ function numFour(){
 		TweenMax.fromTo(".star-four", 1, {scale:3}, {scale:1});
 		$num_one.setAttribute("class", "invisible");
 		$num_four.setAttribute("class", "number-four");
+		numFive();
 	}else{
 		$("ul.choices--numbers li").mouseup(function(){
 			if ($( "ul.choices--numbers li" ).first().hasClass('one')){

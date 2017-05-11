@@ -107,11 +107,6 @@
 	position: absolute;
 	top: 115px;
 	left: 80px;
-	img{
-		//position: absolute;
-		height: 230px;
-		padding: 0 120px;
-	}
 	.drop-three, .drop-two{
 		padding: 14px 91px;
 	}
@@ -129,5 +124,10 @@
 	.drop-nine{
 		height: 229px;
     	padding: 18px 87px;
+	}
+	img{
+		//position: absolute;
+		height: 230px;
+		padding: 0 120px;
 	}
 }

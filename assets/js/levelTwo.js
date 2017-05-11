@@ -27,6 +27,27 @@ var $drag_two = document.querySelector(".drag-two");
 var $drag_three = document.querySelector(".drag-three");
 var $drag_four = document.querySelector(".drag-four");
 var $drag_five = document.querySelector(".drag-five");
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+}
+
+var shapes = $(".shape").get();
+shuffle(shapes);
+
+TweenMax.staggerTo(shapes, 2, {rotation:-20, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(shapes);
+TweenMax.staggerTo(shapes, 3, {scale:1.05, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(shapes);
+TweenMax.staggerTo(shapes, 5, {left:50, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+
+
 window.onload = function() {
     // $(".fade").css("display", "none");
     // $(".fade").fadeIn(2000);
@@ -155,6 +176,7 @@ function revealShapeFive(){
         $star_five.setAttribute("class", "star-five");
         TweenMax.fromTo(".star-five", 1, {scale:3}, {scale:1});
         $drop_five.setAttribute("class", "invisible");
+        $audio_match.pause();
     }else{
         $( function() {
                 $( "#droppable-five" ).droppable({

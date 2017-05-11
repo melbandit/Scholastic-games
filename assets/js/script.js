@@ -29,4 +29,8 @@ function youWinValCheck(){
         $link_four.setAttribute("class", "link-four");
         $audio_home.pause();
     }
+    if (localStorage.getItem("level4complete")) {
+        console.log("LevelFourComplete!!!");
+        $audio_home.pause();
+    }
 }

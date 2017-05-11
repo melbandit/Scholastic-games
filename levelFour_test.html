@@ -6,7 +6,7 @@
     <title>Level Four - Numbers</title>
     <!-- CSS --> 
     <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
 <div class="ipad-container">
@@ -38,37 +38,30 @@
                 </div>
             </div>
             <div class="numbers">
-                
-                <ul class="choices--numbers">
-                    
-                    <li draggable="false" class="one">
-                        <img class="number number-one" src="assets/img/level-four/1_space_ship.png">
-                    </li>
-                    <li draggable="false" class="two">
-                        <img class="number-alt number-two" src="assets/img/level-four/2_planets.png">
-                    </li>
-                    <li draggable="false" class="three">
-                        <img class="number number-three" src="assets/img/level-four/3_shooting_stars.png">
-                    </li>
-                    <li draggable="false" class="four">
-                        <img class="number-alt number-four" src="assets/img/level-four/4_Rockets.png">
-                    </li>
-                    <li draggable="false" class="five">
-                        <img class="number number-five" src="assets/img/level-four/5_astroids.png">
-                    </li>
-                </ul> 
-                <ul id="sortable" class="choices--dotted-line">
-                    <li id="border" class="one ui-state-default">
-                        <img class="number" src="assets/img/level-four/boarderbox.png">
-                    </li>
-                    <li class="two ui-state-default"></li>
-                    <li class="three ui-state-default"></li>
-                    <li class="four ui-state-default"></li>
-                    <li class="five ui-state-default"></li>
+                <div draggable="false" id="border-section">
+                    <div draggable="false" id="border"></div>
                     <!-- <div draggable="false" id="arrow-direction--pos">
                         <img class="arrow-direction" src="assets/img/Arrow-1.png">
                     </div> -->
-                </ul>
+                </div>
+                <ul class="choices--numbers" id="sortable">
+                    
+                    <li class="one ui-state-default">
+                        <img class="number number-one" src="assets/img/level-four/1_space_ship.png">
+                    </li>
+                    <li class="two ui-state-default">
+                        <img class="number-alt number-two" src="assets/img/level-four/2_planets.png">
+                    </li>
+                    <li class="three ui-state-default">
+                        <img class="number number-three" src="assets/img/level-four/3_shooting_stars.png">
+                    </li>
+                    <li class="four ui-state-default">
+                        <img class="number-alt number-four" src="assets/img/level-four/4_Rockets.png">
+                    </li>
+                    <li class="five ui-state-default">
+                        <img class="number number-five" src="assets/img/level-four/5_astroids.png">
+                    </li>
+                </ul> 
             </div>
         </div>
     </div>

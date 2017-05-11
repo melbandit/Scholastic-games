@@ -22,9 +22,13 @@ function getRandom(min, max) {
 }
 var colors = $(".color").get();
 shuffle(colors);
+var stars = $(".star").get();
+shuffle(stars);
 
 TweenMax.staggerTo(colors, 2, {left:20, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
 shuffle(colors);
+TweenMax.staggerTo(stars, 1, {rotation:15, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(stars);
 TweenMax.staggerTo(colors, 5, {rotation:20, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
 shuffle(colors);
 TweenMax.staggerTo(colors, 3, {top:10, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
@@ -32,17 +36,6 @@ TweenMax.staggerTo(colors, 3, {top:10, yoyo:true, repeat:-1, ease:Power2.easeInO
 
 TweenMax.to(".thought-bubble", 2, {transformOrigin:"0% 100%", scaleY: 1.05, rotation: 3, yoyo: true, repeat: -1, ease:Power2.easeInOut})
 
-// TweenMax.to(".color-two", 1.5, {left:left+"px", yoyo:true, delay: 2, repeat:40, repeatDelay: 2, ease:Linear.easeNone});
-// TweenMax.to(".color-three", 1, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
-// TweenMax.to(".color-four", 1.25, {left:left+"px", yoyo:true, delay: 3, repeat:40, repeatDelay: 3, ease:Linear.easeNone});
-// TweenMax.to(".color-five", 0.5, {left:left+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
-// TweenMax.to(".color-six", 0.75, {left:left+"px", yoyo:true, delay: 4, repeat:40, repeatDelay: 4, ease:Linear.easeNone});
-// TweenMax.to(".color-seven", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
-// // TweenMax.to(".color-eight", 1.5, {left:right+"px", yoyo:true, delay: 5, repeat:40, repeatDelay: 5, ease:Linear.easeNone});
-// TweenMax.to(".color-eight", 1.24, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
-// TweenMax.to(".color-nine", 2, {left:right+"px", yoyo:true, delay: 1, repeat:40, repeatDelay: 1, ease:Linear.easeNone});
-// TweenMax.to(".color-ten", 1, {left:right+"px", yoyo:true, delay: delay, repeat:40, repeatDelay: delay, ease:Linear.easeNone});
-// End of Color animation
 var youWinVal;
 var $star_one = document.querySelector(".star-one");
 var $star_two = document.querySelector(".star-two");
@@ -63,11 +56,11 @@ var $drop_two = document.querySelector(".drop-two");
 var $drop_three = document.querySelector(".drop-three");
 var $drop_four = document.querySelector(".drop-four");
 var $drop_five = document.querySelector(".drop-five");
-var $drop_six = document.querySelector(".drop-one");
-var $drop_seven = document.querySelector(".drop-two");
-var $drop_eight = document.querySelector(".drop-three");
-var $drop_nine = document.querySelector(".drop-four");
-var $drop_ten = document.querySelector(".drop-five");
+var $drop_six = document.querySelector(".drop-six");
+var $drop_seven = document.querySelector(".drop-seven");
+var $drop_eight = document.querySelector(".drop-eight");
+var $drop_nine = document.querySelector(".drop-nine");
+var $drop_ten = document.querySelector(".drop-ten");
 window.onload = function() {
     // $(".fade").css("display", "none");
     // $(".fade").fadeIn(2000);
@@ -97,7 +90,7 @@ function revealColor(){
         $star_one.setAttribute("class", "star-one");
         TweenMax.fromTo(".star-one", 1, {scale:3}, {scale:1});
         $drop_one.setAttribute("class", "invisible");
-        $drop_two.setAttribute("class", "drop-two");
+        $drop_nine.setAttribute("class", "drop-nine");
     }else{
         $audio_match.play();
         $( function() {
@@ -110,7 +103,7 @@ function revealColor(){
                     TweenMax.to(".color-one", 1, {left:860, top:60});
                     TweenMax.from(".drag-one", 1, {scale:0});
                     $drop_one.setAttribute("class", "invisible");
-                    $drop_two.setAttribute("class", "drop-two");
+                    $drop_nine.setAttribute("class", "drop-nine");
                     $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
                     localStorage.setItem("lvThreeStar1", 1);
                 }
@@ -122,20 +115,20 @@ function revealColorTwo(){
     if(localStorage.getItem("lvThreeStar2")){
         $star_two.setAttribute("class", "star-two");
         TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
-        $drop_two.setAttribute("class", "invisible");
-        $drop_three.setAttribute("class", "drop-two");
+        $drop_nine.setAttribute("class", "invisible");
+        $drop_five.setAttribute("class", "drop-five");
     }else{
         $( function() {
-            $( "#droppable-two" ).droppable({
-                accept: "#draggable-two",
+            $( "#droppable-nine" ).droppable({
+                accept: "#draggable-nine",
                 drop: function( event, ui ) {
-                    accept: ".drag-two",
+                    accept: ".drag-nine",
                     $star_two.setAttribute("class", "star-two");
                     TweenMax.fromTo(".star-two", 1, {scale:3}, {scale:1});
-                    TweenMax.to(".color-two", 1, {left:860, top:200});
-                    TweenMax.from(".drag-two", 1, {scale:0});
-                    $drop_two.setAttribute("class", "invisible");
-                    $drop_three.setAttribute("class", "drop-two");
+                    TweenMax.to(".color-nine", 1, {left:860, top:200});
+                    TweenMax.from(".drag-nine", 1, {scale:0});
+                    $drop_nine.setAttribute("class", "invisible");
+                    $drop_six.setAttribute("class", "drop-six");
                     $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
                     localStorage.setItem("lvThreeStar2", 2);
                 }
@@ -143,24 +136,25 @@ function revealColorTwo(){
         });
     }
 }
+localStorage.clear();
 function revealColorThree(){
     if(localStorage.getItem("lvThreeStar3")){
         $star_three.setAttribute("class", "star-three");
         TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
-        $drop_three.setAttribute("class", "invisible");
-        $drop_four.setAttribute("class", "drop-three");
+        $drop_six.setAttribute("class", "invisible");
+        $drop_four.setAttribute("class", "drop-four");
     }else{
         $( function() {
-                $( "#droppable-three" ).droppable({
-                    accept: "#draggable-three",
+                $( "#droppable-six" ).droppable({
+                    accept: "#draggable-six",
                     drop: function( event, ui ) {
-                        accept: "#draggable-three",
+                        accept: "#draggable-six",
                         $star_three.setAttribute("class", "star-three");
                         TweenMax.fromTo(".star-three", 1, {scale:3}, {scale:1});
-                        TweenMax.to(".color-three", 1, {left:860, top:360});
-                        TweenMax.from(".drag-three", 1, {scale:0});
-                        $drop_three.setAttribute("class", "invisible");
-                        $drop_four.setAttribute("class", "drop-three");
+                        TweenMax.to(".color-six", 1, {left:860, top:360});
+                        TweenMax.from(".drag-six", 1, {scale:0});
+                        $drop_six.setAttribute("class", "invisible");
+                        $drop_four.setAttribute("class", "drop-four");
                         $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
                         localStorage.setItem("lvThreeStar3", 3);
                 }
@@ -185,7 +179,7 @@ function revealColorFour(){
                         TweenMax.to(".color-four", 1, {left:860, top:500});
                         TweenMax.from(".drag-four", 1, {scale:0});
                         $drop_four.setAttribute("class", "invisible");
-                        $drop_five.setAttribute("class", "drop-four");
+                        $drop_five.setAttribute("class", "drop-five");
                         $('#iggy-char').sprite({fps: 4, no_of_frames: 7, play_frames: 7});
                         localStorage.setItem("lvThreeStar4", 4);
                 }

@@ -5,7 +5,7 @@ video{
 }
 #sortable { 
 	position: absolute; 
-	top: 0px; 
+	top: -30px; 
 	left: -10px; 
 	list-style-type: none; 
 	margin: 0; 
@@ -14,14 +14,15 @@ video{
 	z-index: 1;
 }
 #border-section{
-	position: absolute; 
-	top: -10px;
-	left: -12px;
+	position: relative; 
+	// top: -10px;
+	// left: -12px;
+	z-index: 1;
 	#border{
-		background: transparent url(../img/level-four/boarderbox.png) 0 0 no-repeat;
-		width: 620px;
-		height: 120px;
-		background-size: 100%;
+		// background: transparent url(../img/level-four/boarderbox.png) 0 0 no-repeat;
+		// width: 620px;
+		// height: 120px;
+		// background-size: 100%;
 	}
 	#arrow-direction--pos{
 		position: absolute; 

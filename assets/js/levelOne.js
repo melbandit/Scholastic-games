@@ -1,4 +1,4 @@
-//$('#bird').sprite({fps: 12, no_of_frames: 3});
+ //$('#bird').sprite({fps: 12, no_of_frames: 3});
 $('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
 $('#purple-char-2').sprite({fps: 2, no_of_frames: 5});
 $('#neba-char-2').sprite({fps: 2, no_of_frames: 5});
@@ -27,6 +27,26 @@ var $audio_eyes = document.getElementById("audio--eyes");
 var $audio_whoops = document.getElementById("audio--whoops");
 var $audio_nah = document.getElementById("audio--nah");
 var $link_two = document.querySelector("link-two");
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+}
+
+var character = $(".character-parts").get();
+shuffle(character);
+
+TweenMax.staggerTo(character, 2, {rotation:20, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(character);
+TweenMax.staggerTo(character, 3, {scale:1.05, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+// shuffle(character);
+// TweenMax.staggerTo(character, 3, {top:10, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+
 
 var $activate_level_two = document.querySelector("activateLevelTwo");
 window.onload = function() {

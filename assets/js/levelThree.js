@@ -136,7 +136,6 @@ function revealColorTwo(){
         });
     }
 }
-localStorage.clear();
 function revealColorThree(){
     if(localStorage.getItem("lvThreeStar3")){
         $star_three.setAttribute("class", "star-three");

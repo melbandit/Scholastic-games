@@ -40,6 +40,8 @@ function shuffle(a) {
 
 var character = $(".character-parts").get();
 shuffle(character);
+var stars = $(".star").get();
+shuffle(stars);
 
 TweenMax.staggerTo(character, 2, {rotation:20, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
 shuffle(character);
@@ -47,6 +49,8 @@ TweenMax.staggerTo(character, 3, {scale:1.05, yoyo:true, repeat:-1, ease:Power2.
 // shuffle(character);
 // TweenMax.staggerTo(character, 3, {top:10, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
 
+TweenMax.staggerTo(stars, 1, {rotation:15, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(stars);
 
 var $activate_level_two = document.querySelector("activateLevelTwo");
 window.onload = function() {

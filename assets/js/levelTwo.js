@@ -40,6 +40,8 @@ function shuffle(a) {
 
 var shapes = $(".shape").get();
 shuffle(shapes);
+var stars = $(".star").get();
+shuffle(stars);
 
 TweenMax.staggerTo(shapes, 2, {rotation:-20, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
 shuffle(shapes);
@@ -47,6 +49,8 @@ TweenMax.staggerTo(shapes, 3, {scale:1.05, yoyo:true, repeat:-1, ease:Power2.eas
 shuffle(shapes);
 TweenMax.staggerTo(shapes, 5, {left:50, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
 
+TweenMax.staggerTo(stars, 1, {rotation:15, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(stars);
 
 window.onload = function() {
     // $(".fade").css("display", "none");

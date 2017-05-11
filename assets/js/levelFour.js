@@ -27,6 +27,23 @@ window.onload = function() {
 	firstNumDisplayed();
 }
 
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+}
+var stars = $(".star").get();
+shuffle(stars);
+
+TweenMax.staggerTo(stars, 1, {rotation:15, yoyo:true, repeat:-1, ease:Power2.easeInOut}, 0.3);
+shuffle(stars);
+
+
+
 function monsterDance(){
 	$('#iggy-char-lv4').sprite({fps: 4, no_of_frames: 7, play_frames: 14});
 	$('#purple-char-lv4').sprite({fps: 4, no_of_frames: 5, play_frames: 14});	

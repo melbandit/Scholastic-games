@@ -2,15 +2,7 @@ $('#iggy-char-2').sprite({fps: 4, no_of_frames: 7});
 $('#purple-char-2').sprite({fps: 2, no_of_frames: 5});
 $('#neba-char-2').sprite({fps: 2, no_of_frames: 5});
 
-function shuffle(a) {
-    var j, x, i;
-    for (i = a.length; i; i--) {
-        j = Math.floor(Math.random() * i);
-        x = a[i - 1];
-        a[i - 1] = a[j];
-        a[j] = x;
-    }
-}
+
 
 var left = getRandom(-10, 10);
 var right = getRandom(820, 860);
